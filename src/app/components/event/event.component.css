@@ -1,0 +1,52 @@
+body {
+  width: 100%;
+}
+
+#container{
+    justify-content: space-around;
+    display: flex;
+    height: 360px;
+    z-index: -1;
+}
+
+#pageContainer{
+  padding: 16px;
+  margin-top: 30px;
+  width: 90%;
+}
+
+.child {
+    width: 600px;  /* Or whatever */
+  }
+
+#map{
+  margin:50px 0;
+  z-index: 1;
+}
+  agm-map {
+    height: 300px;
+    width: 400px;
+  }
+
+  #email{
+     margin:60px;
+     float: right;
+  }
+
+  #button{
+      margin: 5px;
+  }
+
+  .officialColor{
+    background-color: #2ec8a6;
+  }
+
+  h1{
+    margin: 5px;
+    background-color: #2ec8a6;
+   
+  }
+  
+  #descriere{
+    margin: 25px 5px;
+  }

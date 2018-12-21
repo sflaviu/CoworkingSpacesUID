@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'anApp';
+  selectedItem = "";
+
+  setSelected(name: string) {
+    console.log(name);
+    this.selectedItem = name;
+  }
+
+  ngOnInit() {
+    this.selectedItem = "main";
+  }
 }
