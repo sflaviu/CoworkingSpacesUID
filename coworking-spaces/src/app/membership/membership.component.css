@@ -1,0 +1,26 @@
+.formAlignment {
+  padding: 10px 10px 15px 10px;
+  border: #DF691A 2px dotted ;
+}
+
+.sectionAlignment {
+  padding: 70px 0px 0px 0px;
+  width: 47%;
+  margin: auto;
+}
+
+.error {
+  color: #DF691A;
+}
+
+.textArrange {
+  font-size: 130%;
+}
+
+.title {
+  color: #DF691A;
+  font-size: 220%;
+  text-align: center;
+  font-weight: bold;
+  padding: 0px 0px 10px 0px;
+}
