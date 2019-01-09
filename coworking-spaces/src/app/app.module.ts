@@ -8,6 +8,8 @@ import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MembershipComponent } from './membership/membership.component';
 
+import {ReactiveFormsModule} from '@angular/forms';
+
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   { path: 'membership', component: MembershipComponent}
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

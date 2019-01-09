@@ -1,60 +1,146 @@
 <app-sticky-header></app-sticky-header>
 
-<form>
-  <fieldset>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
+<section class="sectionAlignment">
+  <form class="formAlignment" [formGroup]="membershipForm" (ngSubmit)="onFormSubmit()">
+    <h2 class="title">Application form</h2>
 
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
+    <fieldset>
+      <div>
+        <label class="textArrange">First name</label>
+        <input type="text" formControlName="firstName" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+        <div *ngIf="submitted && membershipForm.controls.firstName.errors">
+          <div *ngIf="membershipForm.controls.firstName.errors.required" class="error">First name is mandatory</div>
+        </div>
+      </div>
 
-    <div class="form-group">
-      <label for="exampleSelect1">Example select</label>
-      <select class="form-control" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
+      <div>
+        <label class="textArrange">Last name</label>
+        <input type="text" formControlName="lastName" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+        <div *ngIf="submitted && membershipForm.controls.lastName.errors"  class="error">
+          <div *ngIf="membershipForm.controls.lastName.errors.required">First name is mandatory</div>
+        </div>
+      </div>
 
-    <div class="form-group">
-      <label for="exampleSelect2">Example multiple select</label>
-      <select multiple="" class="form-control" id="exampleSelect2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
+      <div>
+        <label class="textArrange">Email</label>
+        <input type="text" formControlName="mail" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+        <div *ngIf="submitted && membershipForm.controls.mail.errors"  class="error">
+          <div *ngIf="membershipForm.controls.mail.errors.required">Email is mandatory</div>
+        </div>
+      </div>
 
-    <div class="form-group">
-      <label for="exampleTextarea">Example textarea</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-    </div>
+      <div>
+        <label class="textArrange">Phone number</label>
+        <input type="text" formControlName="phoneNo" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+        <div *ngIf="submitted && membershipForm.controls.phoneNo.errors"  class="error">
+          <div *ngIf="membershipForm.controls.phoneNo.errors.required">Email is mandatory</div>
+        </div>
+      </div>
+
+      <div>
+        <label class="textArrange">Company</label>
+        <input type="text" formControlName="company" class="form-control" aria-describedby="emailHelp" placeholder="Optional">
+      </div>
+    </fieldset>
 
     <fieldset class="form-group">
-      <legend>Checkboxes</legend>
+      <legend>Team members</legend>
       <div class="form-check">
         <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" checked="">
-          Option one is this and that—be sure to include why it's great
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+          < 5 people
         </label>
       </div>
+
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+          5 - 10 people
+        </label>
+      </div>
+
       <div class="form-check disabled">
         <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" disabled="">
-          Option two is disabled
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+          11 - 20 people
+        </label>
+      </div>
+
+      <div class="form-check disabled">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option3">
+          > 20 people
         </label>
       </div>
     </fieldset>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </fieldset>
-</form>
+
+    <button type="submit" class="btn btn-primary cta">Submit</button>
+  </form>
+</section>
+
+<!--<form [formGroup]="membershipForm" (ngSubmit)="onFormSubmit()">-->
+  <!--<fieldset>-->
+    <!--<div class="form-group">-->
+      <!--<label for="first_name">First name</label>-->
+      <!--<input type="text" formControlName="first_name" class="form-control" formControlName="name" id="first_name" aria-describedby="emailHelp" placeholder="First name">-->
+      <!--<div *nfIg="submitted && membershipForm.controls.first_name.errors" class="error">-->
+        <!--<div *ngIf="membershipForm.controls.errors.required">First name is mandatory</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+      <!--<label for="exampleInputEmail1">First name</label>-->
+      <!--<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
+      <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+      <!--<label for="exampleInputPassword1">Password</label>-->
+      <!--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+      <!--<label for="exampleSelect1">Example select</label>-->
+      <!--<select class="form-control" id="exampleSelect1">-->
+        <!--<option>1</option>-->
+        <!--<option>2</option>-->
+        <!--<option>3</option>-->
+        <!--<option>4</option>-->
+        <!--<option>5</option>-->
+      <!--</select>-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+      <!--<label for="exampleSelect2">Example multiple select</label>-->
+      <!--<select multiple="" class="form-control" id="exampleSelect2">-->
+        <!--<option>1</option>-->
+        <!--<option>2</option>-->
+        <!--<option>3</option>-->
+        <!--<option>4</option>-->
+        <!--<option>5</option>-->
+      <!--</select>-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+      <!--<label for="exampleTextarea">Example textarea</label>-->
+      <!--<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>-->
+    <!--</div>-->
+
+    <!--<fieldset class="form-group">-->
+      <!--<legend>Checkboxes</legend>-->
+      <!--<div class="form-check">-->
+        <!--<label class="form-check-label">-->
+          <!--<input class="form-check-input" type="checkbox" value="" checked="">-->
+          <!--Option one is this and that—be sure to include why it's great-->
+        <!--</label>-->
+      <!--</div>-->
+      <!--<div class="form-check disabled">-->
+        <!--<label class="form-check-label">-->
+          <!--<input class="form-check-input" type="checkbox" value="" disabled="">-->
+          <!--Option two is disabled-->
+        <!--</label>-->
+      <!--</div>-->
+    <!--</fieldset>-->
+    <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+  <!--</fieldset>-->
+<!--</form>-->
