@@ -37,12 +37,9 @@ const appRoutes: Routes = [
     MembershipComponent,
     LocationComponent,
     SpaceRentalComponent,
-<<<<<<< HEAD
     EventsComponent,
-    EventComponent
-=======
+    EventComponent,
     DatepickerComponent
->>>>>>> b9cd43b7f9e04d3e483ceb53c10ef9d02bf96565
   ],
   imports: [
     RouterModule.forRoot(
