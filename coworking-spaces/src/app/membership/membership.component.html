@@ -80,8 +80,14 @@
   </form>
 </section>
 
+
+<div *ngIf="success" class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%; "></div>
+</div>
+
 <div *ngIf="success" class="center" id="successMessage">
-  <p>Your application form has been successfully submitted! We will reach you as soon as possible for asking a few relevant questions.</p>
-  <p>If you have any questions, do not hesitate to contact us at
-    <a style="color:beige">outhub@ourhub.com</a> ! </p>
+  <p>You are 50% done!</p>
+  <div>Your application form has been successfully submitted. We will reach you as soon as possible for asking a few relevant questions.</div>
+  <div>If you have any questions, do not hesitate to contact us at
+    <a style="color:beige">outhub@ourhub.com</a> ! </div>
 </div>

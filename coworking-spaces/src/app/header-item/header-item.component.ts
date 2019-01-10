@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NavbarItem} from '../model/navbarItem';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header-item',
@@ -11,9 +12,12 @@ export class HeaderItemComponent implements OnInit {
   @Input()
   navbarIt: NavbarItem;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  navigateToUrl(url: string): void {
+   this.router.navigate([url]);
+  }
 }

@@ -5,8 +5,11 @@
   </a>
 
   <ul class="sub-menu" *ngIf="navbarIt.submenu">
-    <a class="nav-link" [routerLink]="submenuEntry[1]" routerLinkActive="active"
-        *ngFor="let submenuEntry of navbarIt.submenu">{{ submenuEntry[0] }}
+    <!--<a class="nav-link" *ngFor="let submenuEntry of navbarIt.submenu" [routerLink]="submenuEntry[1]" routerLinkActive="active"-->
+        <!--&gt;{{ submenuEntry[0] }}-->
+    <!--</a>-->
+    <a class="nav-link" *ngFor="let submenuEntry of navbarIt.submenu" (click)="navigateToUrl(submenuEntry[1])">
+      {{ submenuEntry[0] }}
     </a>
   </ul>
 </li>

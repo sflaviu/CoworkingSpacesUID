@@ -9,7 +9,6 @@ import {Globals} from '../model/globals';
   styleUrls: ['./sticky-header.component.css']
 })
 export class StickyHeaderComponent implements OnInit {
-
   @Input()
   hubName: string;
 
