@@ -9,10 +9,14 @@ import { HomeComponent } from './home/home.component';
 import { MembershipComponent } from './membership/membership.component';
 
 import {ReactiveFormsModule} from '@angular/forms';
+import { LocationComponent } from './location/location.component';
+import { SpaceRentalComponent } from './space-rental/space-rental.component';
+import {Globals} from './model/globals';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  { path: 'membership', component: MembershipComponent}
+  {path: 'membership', component: MembershipComponent},
+  {path: 'location', component: LocationComponent}
 ];
 
 @NgModule({
@@ -21,7 +25,9 @@ const appRoutes: Routes = [
     StickyHeaderComponent,
     HeaderItemComponent,
     HomeComponent,
-    MembershipComponent
+    MembershipComponent,
+    LocationComponent,
+    SpaceRentalComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -31,7 +37,7 @@ const appRoutes: Routes = [
     BrowserModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 

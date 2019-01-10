@@ -1,5 +1,13 @@
 <li class="nav-item active">
-  <a class="nav-link" routerLink="/membership" routerLinkActive="active">
-    {{ navbarIt.name }}<span class="sr-only">(current)</span></a>
+  <a class="menuItem nav-link" [routerLink]="navbarIt.url" routerLinkActive="active">
+    {{ navbarIt.name }}
+    <span class="sr-only">(current)</span>
+  </a>
+
+  <ul class="sub-menu" *ngIf="navbarIt.submenu">
+    <a class="nav-link" [routerLink]="submenuEntry[1]" routerLinkActive="active"
+        *ngFor="let submenuEntry of navbarIt.submenu">{{ submenuEntry[0] }}
+    </a>
+  </ul>
 </li>
 
