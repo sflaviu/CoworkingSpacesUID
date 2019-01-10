@@ -1,0 +1,16 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="/" routerLinkActive="active"> {{ globals.hubName }} </a>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <app-header-item class="menuItem"
+        *ngFor="let navbarItem of globals.menuItems"
+        [navbarIt]="navbarItem"></app-header-item>
+    </ul>
+
+    <span class="iconsArrange">
+      <i class="fas fa-user-circle" id="accountIcon"></i>
+    </span>
+  </div>
+</nav>
+

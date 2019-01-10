@@ -1,0 +1,87 @@
+<app-sticky-header></app-sticky-header>
+
+<section class="sectionAlignment">
+  <form class="formAlignment" [formGroup]="membershipForm" (ngSubmit)="onFormSubmit()">
+    <h2 class="title">Application form</h2>
+
+    <fieldset>
+      <div>
+        <label class="textArrange">First name</label>
+        <input type="text" formControlName="firstName" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+        <div *ngIf="submitted && membershipForm.controls.firstName.errors">
+          <div *ngIf="membershipForm.controls.firstName.errors.required" class="error">First name is mandatory</div>
+        </div>
+      </div>
+
+      <div>
+        <label class="textArrange">Last name</label>
+        <input type="text" formControlName="lastName" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+        <div *ngIf="submitted && membershipForm.controls.lastName.errors"  class="error">
+          <div *ngIf="membershipForm.controls.lastName.errors.required">First name is mandatory</div>
+        </div>
+      </div>
+
+      <div>
+        <label class="textArrange">Email</label>
+        <input type="text" formControlName="mail" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+        <div *ngIf="submitted && membershipForm.controls.mail.errors"  class="error">
+          <div *ngIf="membershipForm.controls.mail.errors.required">Email is mandatory</div>
+        </div>
+      </div>
+
+      <div>
+        <label class="textArrange">Phone number</label>
+        <input type="text" formControlName="phoneNo" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+        <div *ngIf="submitted && membershipForm.controls.phoneNo.errors"  class="error">
+          <div *ngIf="membershipForm.controls.phoneNo.errors.required">Email is mandatory</div>
+        </div>
+      </div>
+
+      <div>
+        <label class="textArrange">Company</label>
+        <input type="text" formControlName="company" class="form-control" aria-describedby="emailHelp" placeholder="Optional">
+      </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <legend>Team members</legend>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+          < 5 people
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+          5 - 10 people
+        </label>
+      </div>
+
+      <div class="form-check disabled">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+          11 - 20 people
+        </label>
+      </div>
+
+      <div class="form-check disabled">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option3">
+          > 20 people
+        </label>
+      </div>
+    </fieldset>
+
+    <div class="center">
+      <button type="submit" class="btn btn-primary cta">Submit</button>
+    </div>
+  </form>
+</section>
+
+<div *ngIf="success" class="center" id="successMessage">
+  <p>Your application form has been successfully submitted! We will reach you as soon as possible for asking a few relevant questions.</p>
+  <p>If you have any questions, do not hesitate to contact us at
+    <a style="color:beige">outhub@ourhub.com</a> ! </p>
+</div>
