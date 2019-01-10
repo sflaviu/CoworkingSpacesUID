@@ -8,15 +8,18 @@ import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MembershipComponent } from './membership/membership.component';
 
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LocationComponent } from './location/location.component';
 import { SpaceRentalComponent } from './space-rental/space-rental.component';
 import {Globals} from './model/globals';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'membership', component: MembershipComponent},
-  {path: 'location', component: LocationComponent}
+  {path: 'location', component: LocationComponent},
+  {path: 'spaceRental', component: SpaceRentalComponent}
 ];
 
 @NgModule({
@@ -27,7 +30,8 @@ const appRoutes: Routes = [
     HomeComponent,
     MembershipComponent,
     LocationComponent,
-    SpaceRentalComponent
+    SpaceRentalComponent,
+    DatepickerComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -35,7 +39,9 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
+    FormsModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]

@@ -1,0 +1,91 @@
+.offerItem {
+  border: solid #DF691A 2px;
+  padding: 10px 20px 15px 20px;
+  text-align: center;
+}
+
+.offerTitle{
+  color: #DF691A;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.pad {
+  padding: 80px 40px 0px 40px;
+}
+
+.row
+{
+  display: flex;
+  width: 100%;
+}
+
+.column
+{
+  margin: 5px;
+  flex: 10%;
+  padding: 0px 50px 0px 50px;
+}
+
+/* Form */
+
+.sectionAlignment {
+  padding: 80px 0px 25px 0px;
+  width: 47%;
+  margin: auto;
+}
+
+.formAlignment {
+  padding: 10px 10px 15px 10px;
+  border: #DF691A 2px dotted ;
+}
+
+.error {
+  color: #DF691A;
+}
+
+.textArrange {
+  font-size: 130%;
+}
+
+.title {
+  color: #DF691A;
+  font-size: 220%;
+  text-align: center;
+  font-weight: bold;
+  padding: 0px 0px 10px 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+#successMessage {
+  color: #DF691A;
+  font-size: 110%;
+  padding: 30px 0px 30px 0px;
+}
+
+.datepickerArrange {
+  padding: 50px 50px 0px 50px;
+  font-size: 70%;
+}
+
+#submitBtn {
+  margin: 20px auto 10px auto;
+}
+
+.roundBtn {
+  border-radius: 10px;
+}
+
+.price {
+  font-size: 250%;
+  /*font-weight: bold;*/
+  color: #20c997;
+}
+
+.unit {
+  color: #20c997;
+  font-family: "Times New Roman", "Courier New";
+}
