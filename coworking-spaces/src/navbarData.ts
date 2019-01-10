@@ -94,4 +94,3 @@ export const ADMIN_NAVBAR: any = [
     url: 'manage'
   }
 ]
-
