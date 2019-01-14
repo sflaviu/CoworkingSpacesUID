@@ -42,11 +42,11 @@ const appRoutes: Routes = [
   {path: 'blog', component: BlogComponent},
   {path: 'createPost', component: AddPostComponent},
   {path: 'validations', component: AdminReviewMenuComponent},
-  { path: 'createEvent', component: CreateEventComponent },
-  { path: 'joinHubOwner', component: JoinAsAHubOwnerComponent },
-  {  path: 'validations/validateHubOwnerRequest', component: ValidateHubOwnerComponent },
-  {  path: 'validations/validateHubUserRequest', component: ValidateHubUserComponent },
-  {  path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
+  {path: 'createEvent', component: CreateEventComponent },
+  {path: 'joinHubOwner', component: JoinAsAHubOwnerComponent },
+  {path: 'validations/validateHubOwnerRequest', component: ValidateHubOwnerComponent },
+  {path: 'validations/validateHubUserRequest', component: ValidateHubUserComponent },
+  {path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
 ];
 
 @NgModule({

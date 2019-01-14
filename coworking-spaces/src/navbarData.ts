@@ -91,7 +91,7 @@ export const ADMIN_NAVBAR: any = [
   {
     id: 6,
     name: 'MANAGE',
-    submenu: [['VALIDATE REQUESTS', 'validate'], ['CREATE EVENT', 'createEvent'], ['ADD GAME', 'addGame']],
+    submenu: [['VALIDATE REQUESTS', 'validations'], ['CREATE EVENT', 'createEvent'], ['ADD GAME', 'addGame']],
     url: 'manage'
   }
 ]

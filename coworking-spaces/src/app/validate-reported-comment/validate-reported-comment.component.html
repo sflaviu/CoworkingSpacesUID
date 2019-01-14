@@ -1,38 +1,39 @@
-<div id="main-div">
-  <div id="user-icon">
-    <img src="../../../assets/icons/baseline-account_circle-24px.svg" alt="Hub Owner Name" style="width:40px;height:40px" />
-    <h6 id="icon-title"> Hub Owner Name </h6>
+<div>
+  <div>
+    <app-sticky-header></app-sticky-header>
   </div>
-  <form>
-    <fieldset>
-      <legend>Hub Member Request</legend>
-      <div class="form-group">
-        <label for="name">Blog name</label>
-        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Name">
-      </div>
-      <div class="form-group">
-        <label for="companyDescription">Blog post</label>
-        <textarea class="form-control" id="companyDescription" rows="5"></textarea>
-      </div>
-      <div class="form-group">
-        <label id="link-label" for="user-account-link">User</label>
-        <a id="user-account-link" href="http://localhost:4200">User account link</a>
-      </div>
-      <fieldset class="form-group">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-            Delete comment
-          </label>
+  <div id="main-div">
+    <form>
+      <fieldset>
+        <legend>Hub Member Request</legend>
+        <div class="form-group">
+          <label for="name">Blog name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Name">
         </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-            Un-Report comment
-          </label>
+        <div class="form-group">
+          <label for="companyDescription">Blog post</label>
+          <textarea class="form-control" id="companyDescription" rows="5"></textarea>
         </div>
+        <div class="form-group">
+          <label id="link-label" for="user-account-link">User</label>
+          <a id="user-account-link" href="http://localhost:4200">User account link</a>
+        </div>
+        <fieldset class="form-group">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+              Delete comment
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+              Un-Report comment
+            </label>
+          </div>
+        </fieldset>
       </fieldset>
-    </fieldset>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 </div>
