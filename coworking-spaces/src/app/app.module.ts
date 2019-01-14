@@ -20,6 +20,16 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BlogComponent } from './blog/blog.component';
 import { AddPostComponent } from './add-post/add-post.component';
+import { AdminReviewMenuComponent } from './admin-review-menu/admin-review-menu.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material';
+import { MatDatepickerModule, MatNativeDateModule, MatIconModule} from '@angular/material';
+import { ValidateHubOwnerComponent } from './validate-hub-owner/validate-hub-owner.component';
+import { ValidateReportedCommentComponent } from './validate-reported-comment/validate-reported-comment.component';
+import { JoinAsAHubOwnerComponent } from './join-as-a-hub-owner/join-as-a-hub-owner.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { ValidateHubUserComponent } from './validate-hub-user/validate-hub-user.component';
 
 
 const appRoutes: Routes = [
@@ -30,8 +40,13 @@ const appRoutes: Routes = [
   {path: 'event/:id', component: EventComponent},
   {path: 'spaceRental', component: SpaceRentalComponent},
   {path: 'blog', component: BlogComponent},
-  {path: 'createPost', component: AddPostComponent}
-
+  {path: 'createPost', component: AddPostComponent},
+  {path: 'validations', component: AdminReviewMenuComponent},
+  { path: 'createEvent', component: CreateEventComponent },
+  { path: 'joinHubOwner', component: JoinAsAHubOwnerComponent },
+  {  path: 'validations/validateHubOwnerRequest', component: ValidateHubOwnerComponent },
+  {  path: 'validations/validateHubUserRequest', component: ValidateHubUserComponent },
+  {  path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
 ];
 
 @NgModule({
@@ -47,7 +62,13 @@ const appRoutes: Routes = [
     EventComponent,
     DatepickerComponent,
     BlogComponent,
-    AddPostComponent
+    AddPostComponent,
+    AdminReviewMenuComponent,
+    ValidateHubOwnerComponent,
+    ValidateReportedCommentComponent,
+    JoinAsAHubOwnerComponent,
+    CreateEventComponent,
+    ValidateHubUserComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -63,7 +84,13 @@ const appRoutes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]

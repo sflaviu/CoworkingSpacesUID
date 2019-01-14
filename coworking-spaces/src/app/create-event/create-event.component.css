@@ -1,0 +1,51 @@
+div#main-div {
+  display: inline-block;
+  margin-left: 500px;
+  /*margin-top: 60px;*/
+  width: 800px;
+}
+div#user-icon {
+  float: right;
+}
+
+div#start-page-div {
+  display: flex;
+  margin-left: 790px;
+}
+
+.imageContainer {
+  text-align: center;
+}
+.imageContainer img {
+  display: block;
+  background: white;
+}
+.imageContainer div {
+  position: relative;
+  display: inline-block;
+  /* if you need ie6/7 support */
+  *display: inline;
+  zoom: 1;
+
+}
+
+img {
+  display: inline-block;
+  margin-left: 319px;
+}
+
+.cdk-overlay-container {
+  margin-top: -376px !important;
+  margin-left: 800px !important;
+  color: darkorange !important;
+}
+
+div#whole-page {
+  position: relative;
+}
+
+.mat-form-field-infix {
+  margin-left: 50px;
+}
+
+

@@ -1,0 +1,13 @@
+div#main-div {
+  display: inline-block;
+  margin-left: 500px;
+  margin-top: 160px;
+  width: 800px;
+}
+div#user-icon {
+  float: right;
+}
+
+a#user-account-link{
+  margin-left: 80px;
+}

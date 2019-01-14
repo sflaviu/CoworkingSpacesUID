@@ -1,0 +1,89 @@
+input#search-input {
+  border: solid 1px black;
+}
+
+div#main[_ngcontent-c1][_ngcontent-c1] {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-left: 233px;
+  margin-top: 4px;
+  margin-right: 519px;
+  display: inline-block;
+}
+
+div#user-icon{
+  float: right;
+  margin-top: -35px;
+  margin-right: 575px;
+}
+
+h4#icon-title {
+  margin-top: -1px;
+  margin-right: -71px;
+}
+
+img {
+  margin-left: 33px;
+}
+
+div#title {
+  margin-left: 361px;
+  margin-top: 42px;
+  font-size: 20pt;
+}
+
+select {
+  font-size: 14pt;
+  margin-left: 44px;
+  border: solid 2px black;
+}
+
+mat-form-field#search-form {
+  margin-left: 34px;
+  font-size: 14pt;
+}
+input#search-input {
+  position: relative;
+  border: 1px solid white;
+  background: white;
+  color: darkorange;
+}
+
+img#search-icon {
+  position: absolute;
+  left: 126px;
+  bottom: 1px;
+}
+
+div#accordion-div {
+  margin-top: 51px;
+  font-size: 14pt;
+  margin-left: 26px;
+}
+
+button#cancel-button {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14pt;
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+a#request-1-link {
+  margin-left: 100px;
+}
+a#request-2-link {
+  margin-left: 100px;
+}
+
+a#request-3-link {
+  margin-left: 100px;
+}
+
+a#request-4-link {
+  margin-left: 100px;
+}
+
+select.custom-select {
+  width: 300px;
+}
