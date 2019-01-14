@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-blog',
@@ -32,6 +31,7 @@ export class BlogComponent implements OnInit {
     alert('AI FACUT CLICK');
     const toOpen = {id: i};
     localStorage.setItem('toOpen', JSON.stringify(toOpen));
-    location.assign('/view-post');
+   // location.assign('/view-post');
   }
+
 }
