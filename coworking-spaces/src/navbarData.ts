@@ -2,12 +2,13 @@ export const SITE_VISITOR_NAVBAR: any = [
   {
     id: 1,
     name: 'JOIN US',
+    submenu: [['BECOME MEMBER', 'location'], ['RENT A SPACE', 'spaceRental']],
     url: 'joinUs'
   },
   {
     id: 2,
     name: 'ABOUT',
-    submenu: [['ABOUT US', 'membership'], ['REVIEWS', 'review']],
+    submenu: [['REVIEWS', 'review']],
     url: 'about'
   },
   {
@@ -37,7 +38,7 @@ export const REGULAR_USER_NAVBAR: any = [
   {
     id: 2,
     name: 'JOIN US',
-    submenu: [['BECOME MEMBER', 'join'], ['RENT A SPACE', 'spaceRental']],
+    submenu: [['BECOME MEMBER', 'location'], ['RENT A SPACE', 'spaceRental']],
     url: 'joinUs'
   },
   {
@@ -94,4 +95,3 @@ export const ADMIN_NAVBAR: any = [
     url: 'manage'
   }
 ]
-
