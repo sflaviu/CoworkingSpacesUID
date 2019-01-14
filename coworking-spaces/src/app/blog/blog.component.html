@@ -1,0 +1,42 @@
+<app-sticky-header></app-sticky-header>
+<section class="sectionAlignment">
+<h1>Posts</h1>
+<div class="card-columns">
+  <!--hardcoded part-->
+  <div class="card" >
+    <div class="card-footer">
+      The most important things to know about CoWorking
+    </div>
+    <img class="card-img" src="../../assets/img/bibliocafea1.jpg" width="350" height="450">
+    <div class="card-body">
+      <p class="card-text">It is useless when it comes to UID</p>
+    </div>
+    <div class="card-footer">
+      <p class="card-text">Gorgan :Ai dreptate, dar tot o sa cer sa lucrati in echipe ca sa pierdeti timpul</p>
+      <p class="card-text">Salomie: Ai dreptate, cer si eu interfata grafica ca de ce nu?</p>
+      <input type="text" value="Username" #user>
+      <input type="text" value="Comment" #comment>
+      <button type="button" (click)="postComment(user, comment,i)" class="btn btn-secondary">Post</button>
+    </div>
+  </div>
+  <!--hardcoded part-->
+  <div class="card" *ngFor="let blog of blogs;  let i= index" (click)="openPost(i)">
+    <div class="card-header">
+      {{blog.title}}
+    </div>
+    <img  [src]='photoURL(i)' class="card-img" width="300" height="400"/>
+    <p>{{blog.image}}</p>
+    <div class="card-body">
+      <p class="card-text">{{ blog.content }}</p>
+    </div>
+    <div class="card-footer">
+      <div *ngFor="let comm of blog.comments;  let j= index">
+        <p class="card-text">{{comm.user}}: {{comm.content}}</p>
+      </div>
+      <input type="text" value="Username" #user>
+      <input type="text" value="Comment" #comment>
+      <button type="button" (click)="postComment(user, comment,i)" class="btn btn-secondary">Post</button>
+    </div>
+  </div>
+</div>
+</section>
