@@ -1,0 +1,65 @@
+<div id="whole-page">
+  <div id="start-page-div">
+    <div id="start-image-title">
+      <h3> My Hub </h3>
+    </div>
+    <div id="image-div" class="imageContainer">
+      <div>
+        <img src="../../assets/img/cowork.png" style="width:100px;height:100px;">
+      </div>
+    </div>
+  </div>
+
+  <div id="main-div">
+    <form>
+      <fieldset>
+        <legend>Create an event</legend>
+        <div id="inputs">
+          <div class="form-group">
+            <label for="title" >Title</label>
+            <input id="title" type="text" class="form-control" value="Event Title"> <br/>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input id="description" type="text" class="form-control" value="Event Description"> <br/>
+          </div>
+          <div class="form-group">
+            <label for="spocial-features">Special Features (e.g. free drinks)</label>
+            <input id="special-features" type="text" class="form-control" value="Special Features"> <br/>
+          </div>
+          <div class="form-group">
+            <div id="date-picker-div">
+              <label> Date </label>
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field> <br>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="start time">Start time</label>
+            <select id="start-time" class="custom-select">
+              <option *ngFor="let i of startTime">{{i}}</option>
+            </select> <br>
+          </div>
+          <div class="form-group">
+            <label for="end time">End time</label>
+            <select id="end-time" class="custom-select">
+              <option *ngFor="let i of startTime">{{i}}</option>
+            </select> <br>
+          </div>
+          <div class="form-group">
+            <label for="location" >Title</label>
+            <input id="location" type="text" class="form-control" value="Event Location">
+          </div>
+        </div>
+        <div id="submit-button">
+          <button id="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+
+  </div>
+
+</div>

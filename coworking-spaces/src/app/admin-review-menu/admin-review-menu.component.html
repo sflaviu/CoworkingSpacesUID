@@ -1,0 +1,129 @@
+<div id="main-div">
+  <div id="user-icon">
+    <img src="../../../assets/icons/baseline-account_circle-24px.svg" alt="Hub Owner Name" style="width:40px;height:40px" />
+    <h4 id="icon-title"> Hub Owner Name </h4>
+  </div>
+  <div id="title">
+    <h1>Current Requests</h1>
+  </div>
+
+  <div id="main">
+    <div id="filter-search-div">
+      <select class="custom-select">
+        <option value="filter">Filter Requests</option>
+        <option value="hub-owner">Hub Owner Request</option>
+        <option value="hub-membership">Hub Membership Request</option>
+        <option value="blog">Blog Post</option>
+        <option value="date">Date</option>
+      </select>
+
+      <mat-form-field id="search-form">
+        <input matInput type="search" value="search" id="search-input" class="form-control">
+        <img id="search-icon" src="../../../assets/icons/baseline-search-24px.svg"  style="width:20px;height:20px" />
+      </mat-form-field>
+    </div>
+
+    <div id="accordion-div">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Hub Owner Requests
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Request 1
+                <a href="http://localhost:4200/validations/validateHubOwnerRequest" id="request-1-link"> Link to request </a>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Request 1 Description
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>
+                Proin vel semper arcu. Praesent gravida mauris augue, sit amet vulputate odio blandit sed. Aliquam diam urna, dignissim eget mattis non, tincidunt quis dui. Maecenas maximus, velit eget scelerisque egestas, augue enim dignissim tortor, non faucibus elit dui a arcu. Vivamus et mauris nec mi dapibus dictum vel vitae nulla. Praesent quis tincidunt augue. Cras vehicula venenatis condimentum.
+              </p>
+            </mat-expansion-panel>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Request 2
+                <a href="http://localhost:4200/validations/validateHubOwnerRequest" id="request-2-link"> Link to request </a>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Hub Membership Requests
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Request 1
+                <a href="http://localhost:4200/validateHubUserRequest" id="request-3-link"> Link to request </a>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Request 1 Description
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>
+                Proin vel semper arcu. Praesent gravida mauris augue, sit amet vulputate odio blandit sed. Aliquam diam urna, dignissim eget mattis non, tincidunt quis dui. Maecenas maximus, velit eget scelerisque egestas, augue enim dignissim tortor, non faucibus elit dui a arcu. Vivamus et mauris nec mi dapibus dictum vel vitae nulla. Praesent quis tincidunt augue. Cras vehicula venenatis condimentum.
+              </p>
+            </mat-expansion-panel>
+          </mat-expansion-panel>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Reported Comments
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Request 1
+                <a href="http://localhost:4200/validations/validateReportedCommentRequest" id="request-4-link"> Link to request </a>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Request 1 Description
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>
+                Proin vel semper arcu. Praesent gravida mauris augue, sit amet vulputate odio blandit sed. Aliquam diam urna, dignissim eget mattis non, tincidunt quis dui. Maecenas maximus, velit eget scelerisque egestas, augue enim dignissim tortor, non faucibus elit dui a arcu. Vivamus et mauris nec mi dapibus dictum vel vitae nulla. Praesent quis tincidunt augue. Cras vehicula venenatis condimentum.
+              </p>
+            </mat-expansion-panel>
+          </mat-expansion-panel>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <div id="cancel-button-div">
+      <button id="cancel-button" class="btn btn-primary"> Cancel </button>
+    </div>
+  </div>

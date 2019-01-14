@@ -1,0 +1,95 @@
+/* Background image */
+.background {
+  /* Full height */
+  height: 100%;
+  witdh: 100%;
+  text-align: center;
+  color: orangered;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 230%;
+}
+
+#descriptionImg {
+  height: 100%;
+  width: 100%;
+  filter: brightness(30%);
+}
+
+/*What we offer section*/
+IMG {
+  width: 100%;
+}
+
+.sectionArrange {
+  padding: 30px 0px 10px 0px;
+  background: white;
+}
+
+.listSt {
+  float: right;
+}
+
+.listElement {
+  text-align: center;
+  display: inline-block;
+  height: auto;
+  width: 30%;
+  margin: 10px 1% auto 1%;
+  color: #2B3E50;
+  padding: 0px 25px 40px 25px;
+}
+
+.aboutUs {
+  text-align: center;
+  color: #DF691A;
+  padding: 0px 0px 10px 0px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  padding: 10px 0px 10px 0px;
+}
+
+.footerSection {
+  background-color: #2B3E50;
+  display: inline-block;
+  width: 100%;
+}
+
+.row
+{
+  display: flex;
+  width: 100%;
+}
+
+.column
+{
+  margin: 5px;
+  flex: 10%;
+}
+
+.logo {
+  padding: 15px 0px 0px 30px;
+}
+
+.footerParagraph {
+  padding: 5px 0px 15px 30px;
+  color: #DF691A;
+}
+
+.footerItem {
+  padding: 15px 20px 0px 10px;
+  color: #DF691A;
+  style: bold;
+  font-size: 20px;
+}

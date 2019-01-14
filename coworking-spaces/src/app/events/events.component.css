@@ -1,0 +1,4 @@
+.justify-content-evenly {
+    -ms-flex-pack: distribute !important;
+        justify-content: space-evenly !important;
+  }

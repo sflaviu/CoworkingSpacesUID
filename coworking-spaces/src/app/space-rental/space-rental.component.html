@@ -1,0 +1,98 @@
+<app-sticky-header></app-sticky-header>
+
+<div>
+  <div class="row pad">
+    <div class="column">
+        <div class="offerItem offerTitle" >DAILY PASS</div>
+        <div class="offerItem">This is the offer description, containing details about its characteristics.</div>
+        <div class="offerItem">Availability timetable</div>
+        <div class="offerItem">
+          <div>
+            <span class="price">15 </span>
+            <span class="unit">RON</span>
+            <p>per hour</p>
+          </div>
+          <button *ngIf="globals.role == 'user'" type="submit" class="roundBtn btn btn-primary cta" (click)="onBtnClick('daily')"> Rent </button>
+        </div>
+    </div>
+
+    <div class="column">
+      <div class="offerItem offerTitle">PERMANENT DESK</div>
+      <div class="offerItem">This is the offer description, containing details about its characteristics</div>
+      <div class="offerItem">Availability timetable</div>
+      <div class="offerItem">
+        <div>
+          <span class="price">500 </span>
+          <span class="unit">RON</span>
+          <p>per month</p>
+        </div>
+        <button *ngIf="globals.role == 'user'" type="submit" class="roundBtn btn btn-primary cta" (click)="onBtnClick('permanent')"> Rent </button>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="offerItem offerTitle">TEAM PASS</div>
+      <div class="offerItem">This is the offer description, containing details about its characteristics</div>
+      <div class="offerItem">Availability timetable</div>
+      <div class="offerItem">
+        <div>
+          <span class="price">300 - 470 </span>
+          <span class="unit">RON</span>
+          <p>per person, per month</p>
+        </div>
+        <button *ngIf="globals.role == 'user'" type="submit" class="roundBtn btn btn-primary cta" (click)="onBtnClick('team')"> Rent </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showForm" class="sectionAlignment">
+  <form class="formAlignment" [formGroup]="membershipForm" (ngSubmit)="onFormSubmit()">
+    <h2 class="title">Application form</h2>
+
+    <fieldset>
+      <div class="row">
+        <div clas="column">
+          <app-datepicker class="datepickerArrange"></app-datepicker>
+        </div>
+
+        <div class="column">
+          <div class="form-group">
+            <label for="exampleSelect1">Special requirements</label>
+            <select class="form-control" id="exampleSelect1">
+              <option>None</option>
+              <option>Space at the first floor</option>
+              <option>Computer needed</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleTextarea">Remarks</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+
+          <div *ngIf="showTeamSize" class="form-group">
+            <label class="textArrange">Number of team members</label>
+            <input type="text" formControlName="noTeamMembers" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+            <div *ngIf="submitted && membershipForm.controls.noTeamMembers.errors"  class="error">
+              <div *ngIf="membershipForm.controls.noTeamMembers.errors.required">First name is mandatory.</div>
+              <div *ngIf="membershipForm.controls.noTeamMembers.errors.pattern">The input must be a number. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="center">
+      <button type="submit" class="roundBtn btn btn-primary cta" id="submitBtn" >Request an offer</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="success || showSuccessMessage" class="center" id="successMessage">
+  <p>Your request has been successfully submitted! You will receive an e-mail containing the offer in the next 2 hours.</p>
+  <p>If you have any questions, do not hesitate to contact us at
+    <a style="color:beige">outhub@ourhub.com</a> ! </p>
+</div>
+
+
