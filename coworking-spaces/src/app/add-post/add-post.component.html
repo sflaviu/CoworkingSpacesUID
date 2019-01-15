@@ -3,9 +3,10 @@
 <br>
 <br>
 
-<h1>Add Post</h1>
+
 <div class="row">
   <div class="col-lg-6 col-sm-12 ng-scope">
+    <h1>Add Post</h1>
     <form>
       <div class="form-group">
         <label for="title">Title</label>
@@ -31,6 +32,7 @@
     </form>
   </div>
   <div class="col-lg-6 col-sm-12 ng-scope">
+    <h1>Drafts list</h1>
     <div class="card" *ngFor="let draft of drafts; let i= index">
       <div class="card-header">
         {{draft.title}}
