@@ -59,6 +59,9 @@ html {
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
+  margin-left: 1.0rem;
+  margin-right: 1.0rem;
+
 }
 
 body {
@@ -4895,6 +4898,7 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+
 }
 
 .card > hr {
@@ -5125,7 +5129,8 @@ input[type="button"].btn-block {
 
 .card-columns .card {
   margin-bottom: 0.75rem;
-  margin-left: 1.75rem;
+
+
 }
 
 @media (min-width: 576px) {
@@ -5136,6 +5141,8 @@ input[type="button"].btn-block {
     column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
+    margin-left: 1.0rem;
+    margin-right: 1.0rem;
   }
   .card-columns .card {
     display: inline-block;
