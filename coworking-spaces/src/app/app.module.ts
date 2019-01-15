@@ -37,7 +37,11 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ReviewComponent } from './review/review.component';
 import { HubFinderComponent } from './hub-finder/hub-finder.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ReviewComponent } from './review/review.component';
+import { HubFinderComponent } from './hub-finder/hub-finder.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -90,6 +94,7 @@ const appRoutes: Routes = [
     ViewPostComponent,
     ReviewComponent,
     HubFinderComponent
+
   ],
   imports: [
     RouterModule.forRoot(
@@ -112,7 +117,8 @@ const appRoutes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
   providers: [Globals, LoginComponent, LogoutComponent],
   bootstrap: [AppComponent],
