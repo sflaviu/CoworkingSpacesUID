@@ -64,7 +64,7 @@ export class AddPostComponent implements OnInit {
     drafts.splice(i, 1);
     localStorage.setItem('drafts', JSON.stringify(drafts));
     this.fillDraftsList();
-    alert('Added Blog');
+    alert('Added Post');
   }
   saveDraft(title: HTMLInputElement, description: HTMLInputElement, content: HTMLInputElement) {
     console.log(title.value, content.value);
@@ -92,6 +92,7 @@ export class AddPostComponent implements OnInit {
     localStorage.setItem('drafts', JSON.stringify(drafts));
     this.fillDraftsList();
   }
+
   editDraft(title: HTMLInputElement, description: HTMLInputElement, content: HTMLInputElement, draftTitle: string, draftDescription: string, draftContent: string, i: number) {
     console.log(title.value, content.value);
     title.value = draftTitle;
