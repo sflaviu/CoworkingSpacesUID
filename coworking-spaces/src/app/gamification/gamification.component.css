@@ -7,3 +7,31 @@
     position: relative;
     display: flex;
 }
+
+div#calendar{
+  margin-right: -20px;
+  margin-left: -46px;
+}
+
+div#period-of-availability{
+  position: absolute;
+}
+
+div#content{
+  display: block;
+}
+
+input#lead {
+  width: 30%;
+  margin-left: 90px;
+}
+
+textarea#description {
+  width: 30%;
+  margin-left: 30px;
+}
+
+input#reward {
+  width: 30%;
+  margin-left: 64px;
+}

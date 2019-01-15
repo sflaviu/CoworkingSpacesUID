@@ -32,7 +32,7 @@ export const REGULAR_USER_NAVBAR: any = [
   {
     id: 1,
     name: 'ABOUT',
-    submenu: [['ABOUT US', 'membership'], ['REVIEWS', 'review'], ['MONTHLY GAME', 'gamification']],
+    submenu: [['ABOUT US', 'membership'], ['REVIEWS', 'review']],
     url: 'about'
   },
   {
