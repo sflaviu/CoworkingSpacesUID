@@ -69,7 +69,7 @@ export const ADMIN_NAVBAR: any = [
   {
     id: 2,
     name: 'JOIN US',
-    submenu: [['BECOME MEMBER', 'join'], ['RENT A SPACE', 'spaceRental']],
+    submenu: [['BECOME MEMBER', 'joinHubOwner'], ['RENT A SPACE', 'spaceRental']],
     url: 'joinUs'
   },
   {

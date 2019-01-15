@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValidateHubUserComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
