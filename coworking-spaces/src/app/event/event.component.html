@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <body>
-<app-sticky-header></app-sticky-header>
-<div class="container mt-5">
+
+<div class="container">
     <div  id ="container">
         <div class="child">
             <h1>{{event.title}}</h1>
             <div id="descriere"> {{event.description}}</div>
-            <div id="startTime"> Start time: {{event.startTime}}</div>
-            <div id="endTime"> End time: {{event.endTime}}</div>
-          <div id="features"> Features: {{event.specialFeatures}} </div>
+        
         </div>
 
 
@@ -20,7 +18,7 @@
     </div>
 
     <form class="form-group ">
-        <input  id = "email" [class.is-invalid] = "isInvalid" class="form-control" placeholder="Enter Your Email Address Here" type="text" [(ngModel)]="email" name="email"/>
+        <input  id = "email" class="form-control" placeholder="Enter Your Email Address Here" type="text" [(ngModel)]="email" name="email"/>
         <button id="button" (click)="onClick()" data-toggle="tooltip" data-original-title="Book seat">Book seat</button><br>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </form>

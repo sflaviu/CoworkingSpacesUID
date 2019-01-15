@@ -30,8 +30,6 @@ import { ValidateReportedCommentComponent } from './validate-reported-comment/va
 import { JoinAsAHubOwnerComponent } from './join-as-a-hub-owner/join-as-a-hub-owner.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ValidateHubUserComponent } from './validate-hub-user/validate-hub-user.component';
-import { SubmittedCommentsComponent } from './submitted-comments/submitted-comments.component';
-import { GamificationComponent } from './gamification/gamification.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -52,7 +50,6 @@ const appRoutes: Routes = [
   {path: 'createEvent', component: CreateEventComponent },
   {path: 'joinHubOwner', component: JoinAsAHubOwnerComponent },
   {path: 'validations/validateHubOwnerRequest', component: ValidateHubOwnerComponent },
-  {path: 'validations/validateHubOwnerRequest/:id', component: ValidateHubOwnerComponent },
   {path: 'validations/validateHubUserRequest', component: ValidateHubUserComponent },
   {path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
   {path: 'gamification', component: GamificationComponent},
@@ -82,8 +79,6 @@ const appRoutes: Routes = [
     JoinAsAHubOwnerComponent,
     CreateEventComponent,
     ValidateHubUserComponent,
-    SubmittedCommentsComponent,
-    GamificationComponent,
     ViewPostComponent,
     LoginComponent,
     LogoutComponent,

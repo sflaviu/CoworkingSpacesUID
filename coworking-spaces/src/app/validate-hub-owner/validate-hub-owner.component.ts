@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {hubOwner1, hubOwner2} from "../../constants";
-import {ActivatedRoute} from "@angular/router";
+import {hubOwner} from "../../constants";
 
 @Component({
   selector: 'app-validate-hub-owner',
@@ -8,17 +7,11 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./validate-hub-owner.component.css']
 })
 export class ValidateHubOwnerComponent implements OnInit {
-  hbb :object;
-  id : number;
 
-  constructor(private route: ActivatedRoute) {
-    this.route.params.subscribe(params =>   {
-      this.id = params.id;
-    });
+  constructor() { }
 
-    (this.id == 1) ? this.hbb = hubOwner1 : this.hbb = hubOwner2;
-  }
   ngOnInit() {
+    console.log(hubOwner.name);
   }
 
 }

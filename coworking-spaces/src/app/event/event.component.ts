@@ -21,7 +21,6 @@ export class EventComponent implements OnInit {
   eventArray: Event[];
 
   email :string;
-  isInvalid : boolean;
 
   lat: number;
   lng: number;
@@ -44,7 +43,6 @@ export class EventComponent implements OnInit {
 
   ngOnInit() {
     this.email='';
-    this.isInvalid = false;
   }
 
   onClick() {
@@ -54,17 +52,15 @@ export class EventComponent implements OnInit {
       if(this.email.match(pattern)) {
         if(this.event.nbSeats>0)
         this.toastr.success("Please check your email for seat confirmation ");
-        this.isInvalid = true;
       }
       else {
         this.toastr.error("This doesn't appear to be a valid email address");
-        this.isInvalid = true;
       }
 
     }
     else {
+      console.log(this.toastr);
       this.toastr.error('The email field cannot be empty');
-      this.isInvalid = true;
     }
 
   }
