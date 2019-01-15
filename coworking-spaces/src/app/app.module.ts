@@ -13,9 +13,9 @@ import { SpaceRentalComponent } from './space-rental/space-rental.component';
 import {Globals} from './model/globals';
 import { EventsComponent } from './events/events.component';
 import { EventComponent } from './event/event.component';
-import { AgmCoreModule } from '@agm/core';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgmCoreModule} from '@agm/core';
+import { ToastrModule} from 'ngx-toastr';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BlogComponent } from './blog/blog.component';
@@ -42,6 +42,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ReviewComponent } from './review/review.component';
 import { HubFinderComponent } from './hub-finder/hub-finder.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -118,7 +119,8 @@ const appRoutes: Routes = [
     MatNativeDateModule,
     MatIconModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [Globals, LoginComponent, LogoutComponent],
   bootstrap: [AppComponent],

@@ -8,10 +8,6 @@
   font-size: 130%;
 }
 
-.finderAlignment {
-  /*padding: 10px 10px 15px 10px;
-  border: #DF691A 2px dotted ; */
-}
 
 /* Split the screen in half */
 .split {
@@ -27,11 +23,13 @@
 /* Control the left side */
 .left {
   left: 0;
+  padding: 60% 0px 0px 0px;
 }
 
 /* Control the right side */
 .right {
   right: 0;
+  padding: 60% 0px 0px 0px;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -45,8 +43,8 @@
 
 /* Style the image inside the centered container, if needed */
 .centered img {
-  width: 150px;
-  border-radius: 50%;
+  width: 500px;
+  border-radius: 60%;
 }
 
 .title {
@@ -55,6 +53,13 @@
   text-align: center;
   font-weight: bold;
   padding: 0px 0px 10px 0px;
+}
+
+.hubName {
+  color: white;
+  font-size: 140%;
+  text-align: center;
+  font-weight: bold;
 }
 
 .wrapper{
@@ -67,8 +72,27 @@
   width: 22px;
 }
 
-input.checkBoxClass
-{
-  width: 30px;
-  height: 30px;
+.arrowStyle{
+  color:#DF691A;
+  font-size: 180%;
+}
+
+.arrowLeft{
+  float:left;
+}
+
+.arrowRight{
+  float:right;
+}
+
+.price{
+  font-size:52%;
+  color:#DF691A;
+}
+
+.slider{
+  width: 80%;
+}
+.selectedAmountClass{
+  font-size: 75%;
 }
