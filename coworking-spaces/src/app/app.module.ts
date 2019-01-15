@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+<<<<<<< HEAD
 import { BlogComponent } from './blog/blog.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { AdminReviewMenuComponent } from './admin-review-menu/admin-review-menu.component';
@@ -35,6 +36,10 @@ import { GamificationComponent } from './gamification/gamification.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 
 
+=======
+import { ReviewComponent } from './review/review.component';
+import { HubFinderComponent } from './hub-finder/hub-finder.component';
+>>>>>>> Added 2 components
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -43,6 +48,7 @@ const appRoutes: Routes = [
   {path: 'events', component: EventsComponent},
   {path: 'event/:id', component: EventComponent},
   {path: 'spaceRental', component: SpaceRentalComponent},
+<<<<<<< HEAD
   {path: 'blog', component: BlogComponent},
   {path: 'createPost', component: AddPostComponent},
   {path: 'validations', component: AdminReviewMenuComponent},
@@ -53,6 +59,10 @@ const appRoutes: Routes = [
   {  path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
   {path: 'gamification', component: GamificationComponent},
   {path: 'submitted-comments', component: SubmittedCommentsComponent},
+=======
+  {path: 'review', component: ReviewComponent},
+  {path: 'explore', component: HubFinderComponent}
+>>>>>>> Added 2 components
 ];
 
 @NgModule({
@@ -67,6 +77,7 @@ const appRoutes: Routes = [
     EventsComponent,
     EventComponent,
     DatepickerComponent,
+<<<<<<< HEAD
     BlogComponent,
     AddPostComponent,
     AdminReviewMenuComponent,
@@ -78,6 +89,10 @@ const appRoutes: Routes = [
     SubmittedCommentsComponent,
     GamificationComponent,
     ViewPostComponent
+=======
+    ReviewComponent,
+    HubFinderComponent
+>>>>>>> Added 2 components
   ],
   imports: [
     RouterModule.forRoot(

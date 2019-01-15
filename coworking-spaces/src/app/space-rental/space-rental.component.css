@@ -27,7 +27,11 @@
   padding: 0px 50px 0px 50px;
 }
 
-/* Form */
+.starClass{
+  color:#DF691A;
+  font-size: 130%;
+  width: 22px;
+}
 
 .sectionAlignment {
   padding: 80px 0px 25px 0px;

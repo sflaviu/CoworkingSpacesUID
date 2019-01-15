@@ -1,0 +1,51 @@
+<app-sticky-header></app-sticky-header>
+
+<section class="sectionAlignment">
+
+  <div class="finderAlignment">
+    <h1 class="title" > Find a hub! </h1>
+
+    <br/>
+
+    <div class="split left">
+      <div class="centered">
+
+        <label class="textArrange" > Choose town :
+         <select>
+          <option *ngFor="let item of listOfCities"> {{item}}  </option>
+         </select>
+        </label>
+
+        <br/>
+        <br/>
+
+        <label class="textArrange"> Price range (person/day):
+          <input type="range" ngModel="valuePrice" min="0" max="100" >
+        </label>
+        <br/>
+        <br/>
+
+        <label class="textArrange" >Minimum rating :  </label>
+        <br/>
+        <a *ngFor="let item of starListMinRating; let i=index " (click)="setStarMinRating(i)">
+          <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}" ></i>
+        </a>
+        <label class="textArrange" > -{{ratingMinRating}} stars</label>
+
+        <br/>
+        <br/>
+
+        <label class="textArrange" > Fruit/beverages serving :  </label>
+
+
+      </div>
+    </div>
+
+    <div class="split right">
+      <div class="centered">
+        <img src="assets/img/clujhub.jpg" alt="Cluj hub">
+
+      </div>
+    </div>
+  </div>
+</section>

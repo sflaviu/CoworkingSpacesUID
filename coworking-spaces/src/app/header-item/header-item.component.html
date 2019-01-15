@@ -1,5 +1,5 @@
 <li class="nav-item active">
-  <a class="menuItem nav-link" [routerLink]="navbarIt.url" routerLinkActive="active">
+  <a class="menuItem nav-link" (click)="navigateToUrl(navbarIt.url)">
     {{ navbarIt.name }}
     <span class="sr-only">(current)</span>
   </a>
