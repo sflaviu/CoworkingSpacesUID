@@ -593,8 +593,8 @@ pre code {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right:1.25rem;
-  margin-left: 1.25rem;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .no-gutters {
@@ -627,7 +627,6 @@ pre code {
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
-
 }
 
 .col-auto {

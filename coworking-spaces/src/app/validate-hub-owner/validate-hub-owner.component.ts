@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {hubOwner} from "../../constants";
 
 @Component({
   selector: 'app-validate-hub-owner',
@@ -10,6 +11,7 @@ export class ValidateHubOwnerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(hubOwner.name);
   }
 
 }

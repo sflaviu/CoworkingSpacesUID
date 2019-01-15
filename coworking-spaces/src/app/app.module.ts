@@ -32,6 +32,8 @@ import { CreateEventComponent } from './create-event/create-event.component';
 import { ValidateHubUserComponent } from './validate-hub-user/validate-hub-user.component';
 import { SubmittedCommentsComponent } from './submitted-comments/submitted-comments.component';
 import { GamificationComponent } from './gamification/gamification.component';
+import { ViewPostComponent } from './view-post/view-post.component';
+
 
 
 const appRoutes: Routes = [
@@ -74,7 +76,8 @@ const appRoutes: Routes = [
     CreateEventComponent,
     ValidateHubUserComponent,
     SubmittedCommentsComponent,
-    GamificationComponent
+    GamificationComponent,
+    ViewPostComponent
   ],
   imports: [
     RouterModule.forRoot(

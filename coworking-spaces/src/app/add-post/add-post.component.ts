@@ -30,28 +30,30 @@ export class AddPostComponent implements OnInit {
 
     image.src = URL.createObjectURL(this.selectedFile);
   }
-  addBlog(title: HTMLInputElement, content: HTMLInputElement) {
-    console.log(title.value, content.value);
+  addBlog(title: HTMLInputElement, description: HTMLInputElement, content: HTMLInputElement) {
+    console.log(title.value, description.value, content.value);
     const blogList = localStorage.getItem('blogs');
     let blogs = [];
     if (blogList) {
       blogs = JSON.parse(blogList);
     }
-    const blog = {title: title.value, content: content.value, image: URL.createObjectURL( this.selectedFile), comments: []};
-    blogs.push(blog);
+    let blog;
+    if(this.selectedFile !=null)
+    blog = {title: title.value, description: description.value, content: content.value, image: URL.createObjectURL( this.selectedFile), comments: []};
+    else { blog = {title: title.value, description: description.value, content: content.value, image:'', comments: []}; }    blogs.push(blog);
     localStorage.setItem('blogs', JSON.stringify(blogs));
     title.value = '';
     content.value = '';
     alert('Added Blog');
   }
-  addBlogFromDraft(title: string, content: string, i: number) {
+  addBlogFromDraft(title: string, description: string, content: string, i: number) {
     // console.log(title.value, content.value);
     const blogList = localStorage.getItem('blogs');
     let blogs = [];
     if (blogList) {
       blogs = JSON.parse(blogList);
     }
-    const blog = {title: title, content: content, image: 'test', comments: []};
+    const blog = {title: title, description: description, content: content, image: 'test', comments: []};
     blogs.push(blog);
     localStorage.setItem('blogs', JSON.stringify(blogs));
     const draftsList = localStorage.getItem('drafts');
@@ -62,19 +64,20 @@ export class AddPostComponent implements OnInit {
     drafts.splice(i, 1);
     localStorage.setItem('drafts', JSON.stringify(drafts));
     this.fillDraftsList();
-    alert('Added Blog');
+    alert('Added Post');
   }
-  saveDraft(title: HTMLInputElement, content: HTMLInputElement) {
+  saveDraft(title: HTMLInputElement, description: HTMLInputElement, content: HTMLInputElement) {
     console.log(title.value, content.value);
     const blogList = localStorage.getItem('drafts');
     let drafts = [];
     if (blogList) {
       drafts = JSON.parse(blogList);
     }
-    const draft = {title: title.value, content: content.value};
+    const draft = {title: title.value, description: description.value, content: content.value};
     drafts.push(draft);
     localStorage.setItem('drafts', JSON.stringify(drafts));
     title.value = '';
+    description.value = '';
     content.value = '';
     this.fillDraftsList();
     alert('Added Draft');
@@ -89,10 +92,12 @@ export class AddPostComponent implements OnInit {
     localStorage.setItem('drafts', JSON.stringify(drafts));
     this.fillDraftsList();
   }
-  editDraft(title: HTMLInputElement, content: HTMLInputElement, draftTitle: string, draftContent: string, i: number) {
+
+  editDraft(title: HTMLInputElement, description: HTMLInputElement, content: HTMLInputElement, draftTitle: string, draftDescription: string, draftContent: string, i: number) {
     console.log(title.value, content.value);
     title.value = draftTitle;
     content.value = draftContent;
+    description.value = draftDescription;
     const draftsList = localStorage.getItem('drafts');
     let drafts = [];
     if (draftsList) {

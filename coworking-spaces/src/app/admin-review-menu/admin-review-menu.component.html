@@ -1,13 +1,10 @@
 <div id="main-div">
-  <div id="user-icon">
-    <img src="../../../assets/icons/baseline-account_circle-24px.svg" alt="Hub Owner Name" style="width:40px;height:40px" />
-    <h4 id="icon-title"> Hub Owner Name </h4>
-  </div>
-  <div id="title">
-    <h1>Current Requests</h1>
+  <div>
+    <app-sticky-header></app-sticky-header>
   </div>
 
   <div id="main">
+    <legend>Current Requests</legend>
     <div id="filter-search-div">
       <select class="custom-select">
         <option value="filter">Filter Requests</option>
@@ -74,7 +71,7 @@
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Request 1
-                <a href="http://localhost:4200/validateHubUserRequest" id="request-3-link"> Link to request </a>
+                <a href="http://localhost:4200/validations/validateHubUserRequest" id="request-3-link"> Link to request </a>
               </mat-panel-title>
             </mat-expansion-panel-header>
 
