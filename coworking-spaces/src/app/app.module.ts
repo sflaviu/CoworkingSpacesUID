@@ -35,7 +35,8 @@ import { GamificationComponent } from './gamification/gamification.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-
+import { ReviewComponent } from './review/review.component';
+import { HubFinderComponent } from './hub-finder/hub-finder.component';
 
 
 const appRoutes: Routes = [
@@ -56,7 +57,9 @@ const appRoutes: Routes = [
   {path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
   {path: 'gamification', component: GamificationComponent},
   {path: 'submitted-comments', component: SubmittedCommentsComponent},
-  {path: 'view-post', component: ViewPostComponent}
+  {path: 'view-post', component: ViewPostComponent},
+  {path: 'review', component: ReviewComponent},
+  {path: 'explore', component: HubFinderComponent}
 ];
 
 @NgModule({
@@ -83,7 +86,10 @@ const appRoutes: Routes = [
     GamificationComponent,
     ViewPostComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    ViewPostComponent,
+    ReviewComponent,
+    HubFinderComponent
   ],
   imports: [
     RouterModule.forRoot(

@@ -1,0 +1,62 @@
+<app-sticky-header></app-sticky-header>
+
+<section class="sectionAlignment">
+
+  <div class="reviewAlignment">
+    <h1 class="title" >Review form  </h1>
+
+    <br/>
+    <div>
+      <label class="textArrange" >Overall rating :  </label>
+      <br/>
+      <a *ngFor="let item of starListOA; let i=index " (click)="setStarOA(i)">
+        <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}" ></i>
+      </a>
+      <label class="textArrange" > -{{ratingOA}} stars</label>
+
+      <br/>
+      <br/>
+
+      <label class="textArrange">Experience description :  </label>
+      <br/>
+      <textarea rows="7" cols="55"></textarea>
+
+      <br/>
+      <br/>
+
+      <label class="textArrange">Location rating :  </label>
+      <br/>
+      <a *ngFor="let item of starListLoc; let i=index " (click)="setStarLoc(i)">
+        <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}"></i>
+      </a>
+      <label class="textArrange" > -{{ratingLoc}} stars</label>
+
+      <br/>
+      <br/>
+
+      <label  class="textArrange">Staff rating : </label>
+      <br/>
+      <a *ngFor="let item of starListStaff; let i=index " (click)="setStarStaff(i)">
+        <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}" style="color:#DF691A"></i>
+      </a>
+      <label class="textArrange" > - {{ratingStaff}} stars</label>
+
+      <br/>
+      <br/>
+
+      <label class="textArrange">Environment rating :   </label>
+      <br/>
+      <a *ngFor="let item of starListEnv; let i=index " (click)="setStarEnv(i)">
+        <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}" ></i>
+      </a>
+      <label class="textArrange" > - {{ratingEnv}} stars</label>
+
+      <br/>
+      <br/>
+
+      <div class="wrapper">
+        <button class = "buttonReview btn btn-primary cta" >Submit review!</button>
+      </div>
+    </div>
+  </div>
+</section>
