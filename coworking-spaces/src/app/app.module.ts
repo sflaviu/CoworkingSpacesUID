@@ -34,12 +34,16 @@ import { ValidateHubUserComponent } from './validate-hub-user/validate-hub-user.
 import { SubmittedCommentsComponent } from './submitted-comments/submitted-comments.component';
 import { GamificationComponent } from './gamification/gamification.component';
 import { ViewPostComponent } from './view-post/view-post.component';
-
-
-=======
 import { ReviewComponent } from './review/review.component';
 import { HubFinderComponent } from './hub-finder/hub-finder.component';
->>>>>>> Added 2 components
+
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ReviewComponent } from './review/review.component';
+import { HubFinderComponent } from './hub-finder/hub-finder.component';
+>>>>>>> integrated into standard and added 2 components
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -59,10 +63,12 @@ const appRoutes: Routes = [
   {  path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
   {path: 'gamification', component: GamificationComponent},
   {path: 'submitted-comments', component: SubmittedCommentsComponent},
+  {path: 'review', component: ReviewComponent},
+  {path: 'explore', component: HubFinderComponent}
 =======
   {path: 'review', component: ReviewComponent},
   {path: 'explore', component: HubFinderComponent}
->>>>>>> Added 2 components
+>>>>>>> integrated into standard and added 2 components
 ];
 
 @NgModule({
@@ -88,11 +94,13 @@ const appRoutes: Routes = [
     ValidateHubUserComponent,
     SubmittedCommentsComponent,
     GamificationComponent,
-    ViewPostComponent
+    ViewPostComponent,
+    ReviewComponent,
+    HubFinderComponent
 =======
     ReviewComponent,
     HubFinderComponent
->>>>>>> Added 2 components
+>>>>>>> integrated into standard and added 2 components
   ],
   imports: [
     RouterModule.forRoot(
@@ -114,7 +122,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatIconModule
+    MatIconModule,
+      FormsModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]
