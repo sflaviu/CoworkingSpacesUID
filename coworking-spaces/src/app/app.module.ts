@@ -13,18 +13,17 @@ import { SpaceRentalComponent } from './space-rental/space-rental.component';
 import {Globals} from './model/globals';
 import { EventsComponent } from './events/events.component';
 import { EventComponent } from './event/event.component';
-import { AgmCoreModule } from '@agm/core';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgmCoreModule} from '@agm/core';
+import { ToastrModule} from 'ngx-toastr';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
-<<<<<<< HEAD
 import { BlogComponent } from './blog/blog.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { AdminReviewMenuComponent } from './admin-review-menu/admin-review-menu.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material';
+import {MatInputModule, MatSliderModule} from '@angular/material';
 import { MatDatepickerModule, MatNativeDateModule, MatIconModule} from '@angular/material';
 import { ValidateHubOwnerComponent } from './validate-hub-owner/validate-hub-owner.component';
 import { ValidateReportedCommentComponent } from './validate-reported-comment/validate-reported-comment.component';
@@ -36,14 +35,7 @@ import { GamificationComponent } from './gamification/gamification.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { ReviewComponent } from './review/review.component';
 import { HubFinderComponent } from './hub-finder/hub-finder.component';
-
-=======
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DatepickerComponent } from './datepicker/datepicker.component';
-import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ReviewComponent } from './review/review.component';
-import { HubFinderComponent } from './hub-finder/hub-finder.component';
->>>>>>> integrated into standard and added 2 components
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -52,7 +44,6 @@ const appRoutes: Routes = [
   {path: 'events', component: EventsComponent},
   {path: 'event/:id', component: EventComponent},
   {path: 'spaceRental', component: SpaceRentalComponent},
-<<<<<<< HEAD
   {path: 'blog', component: BlogComponent},
   {path: 'createPost', component: AddPostComponent},
   {path: 'validations', component: AdminReviewMenuComponent},
@@ -64,13 +55,10 @@ const appRoutes: Routes = [
   {path: 'gamification', component: GamificationComponent},
   {path: 'submitted-comments', component: SubmittedCommentsComponent},
   {path: 'review', component: ReviewComponent},
-  {path: 'explore', component: HubFinderComponent}
-=======
+  {path: 'explore', component: HubFinderComponent},
   {path: 'review', component: ReviewComponent},
   {path: 'explore', component: HubFinderComponent}
->>>>>>> integrated into standard and added 2 components
-];
-
+  ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +71,6 @@ const appRoutes: Routes = [
     EventsComponent,
     EventComponent,
     DatepickerComponent,
-<<<<<<< HEAD
     BlogComponent,
     AddPostComponent,
     AdminReviewMenuComponent,
@@ -96,11 +83,9 @@ const appRoutes: Routes = [
     GamificationComponent,
     ViewPostComponent,
     ReviewComponent,
-    HubFinderComponent
-=======
+    HubFinderComponent,
     ReviewComponent,
     HubFinderComponent
->>>>>>> integrated into standard and added 2 components
   ],
   imports: [
     RouterModule.forRoot(
@@ -123,7 +108,9 @@ const appRoutes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
-      FormsModule
+      FormsModule,
+    MatCheckboxModule,
+    MatSliderModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]

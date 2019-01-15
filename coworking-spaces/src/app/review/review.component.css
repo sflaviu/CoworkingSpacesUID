@@ -32,3 +32,17 @@
 .buttonReview{
   font-size: 130%;
 }
+
+.errorClass{
+  color: red;
+}
+
+.center{
+  text-align: center ;
+}
+.successfulClass{
+  color: green;
+}
+
+
+
