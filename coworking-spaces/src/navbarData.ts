@@ -38,7 +38,7 @@ export const REGULAR_USER_NAVBAR: any = [
   {
     id: 2,
     name: 'JOIN US',
-    submenu: [['BECOME MEMBER', 'location'], ['RENT A SPACE', 'spaceRental']],
+    submenu: [['HUB OWNER', 'joinHubOwner'], ['BECOME MEMBER', 'location'], ['RENT A SPACE', 'spaceRental']],
     url: 'joinUs'
   },
   {
@@ -91,7 +91,7 @@ export const ADMIN_NAVBAR: any = [
   {
     id: 6,
     name: 'MANAGE',
-    submenu: [['VALIDATE REQUESTS', 'validate'], ['CREATE EVENT', 'createEvent'], ['ADD GAME', 'addGame']],
+    submenu: [['VALIDATE REQUESTS', 'validations'], ['CREATE EVENT', 'createEvent'], ['ADD GAME', 'addGame']],
     url: 'manage'
   }
 ]
