@@ -8,6 +8,44 @@
   font-size: 200%;
 }
 
-#accountIcon:hover {
+.sub-menu {
+  position: absolute;
+  right: -18px;
+  display: none;
+  background-color: #DF691A;
+  padding: 5px;
+  width: 110px;
+}
 
+.sub-menu > span {
+  display: block;
+  cursor: pointer;
+}
+
+span:hover .sub-menu {
+  display: block;
+}
+
+#logIn {
+  font-size: 50%;
+}
+
+#logOut {
+  font-size: 50%;
+}
+
+#logIn:hover {
+  text-decoration: underline;
+}
+
+#logOut:hover {
+  text-decoration: underline;
+}
+
+#userName {
+  margin: 0px 3px 0px 0px;
+  font-size: 110%;
+  color: #2B3E50;
+  font-weight: bold;
+  font-style: italic;
 }

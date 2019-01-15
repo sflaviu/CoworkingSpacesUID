@@ -8,8 +8,22 @@
         [navbarIt]="navbarItem"></app-header-item>
     </ul>
 
-    <span class="iconsArrange">
+    <span class="iconsArrange" id="userName" *ngIf="globals.isLoggedIn">
+      {{globals.loggedInUsername }}
+    </span>
+
+    <span class="iconsArrange nav-item active">
       <i class="fas fa-user-circle" id="accountIcon"></i>
+
+      <ul class="sub-menu">
+        <a class="nav-link" *ngIf="!globals.isLoggedIn" (click)="onLoginClick()" id="logIn">
+          Log In
+        </a>
+
+        <a class="nav-link" *ngIf="globals.isLoggedIn" (click)="onLogoutClick()" id="logOut">
+          Log Out
+        </a>
+      </ul>
     </span>
   </div>
 </nav>

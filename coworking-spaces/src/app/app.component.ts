@@ -13,12 +13,6 @@ export class AppComponent implements OnInit {
   constructor(private globals: Globals) { }
 
   ngOnInit() {
-    if (this.globals.role === 'siteVisitor') {
-      this.globals.menuItems = SITE_VISITOR_NAVBAR;
-    } else if (this.globals.role === 'user') {
-      this.globals.menuItems = REGULAR_USER_NAVBAR;
-    } else {
-      this.globals.menuItems = ADMIN_NAVBAR;
-    }
+    this.globals.menuItems = SITE_VISITOR_NAVBAR;
   }
 }

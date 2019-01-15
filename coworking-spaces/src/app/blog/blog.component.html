@@ -40,9 +40,11 @@
       <div *ngFor="let comm of blog.comments;  let j= index">
         <p class="card-text">{{comm.user}}: {{comm.content}}</p>
       </div>
-      <input type="text" value="Username" #user>
-      <input type="text" value="Comment" #comment>
-      <button type="button" (click)="postComment(user, comment,i)" class="btn btn-secondary">Post</button>
+      <!--<input type="text" value="Username" #user>-->
+      <div *ngIf="globals.isLoggedIn">
+        <input type="text" value="Comment" #comment>
+        <button type="button" (click)="postComment(comment,i)" class="btn btn-secondary">Post</button>
+      </div>
     </div>
   </div>
 </div>

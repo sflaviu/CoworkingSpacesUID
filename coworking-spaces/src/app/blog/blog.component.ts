@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import {Globals} from '../model/globals';
 
 @Component({
   selector: 'app-blog',
@@ -11,7 +12,8 @@ export class BlogComponent implements OnInit {
 
   blogs = [];
   constructor(public sanitizer: DomSanitizer,
-              private router: Router) { }
+              private router: Router,
+              private globals: Globals) { }
 
 
   ngOnInit() {
@@ -30,8 +32,8 @@ export class BlogComponent implements OnInit {
   photoURL(i: number ) {
     return this.sanitizer.bypassSecurityTrustUrl(this.blogs[i].image);
   }
-  postComment(user: HTMLInputElement, comm: HTMLInputElement, i: number) {
-    const comment = {user: user.value, content: comm.value};
+  postComment(comm: HTMLInputElement, i: number) {
+    const comment = {user: this.globals.loggedInUsername, content: comm.value};
     this.blogs[i].comments.push(comment);
     localStorage.setItem('blogs', JSON.stringify(this.blogs));
   }

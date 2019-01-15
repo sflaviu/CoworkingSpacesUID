@@ -23,7 +23,7 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { AdminReviewMenuComponent } from './admin-review-menu/admin-review-menu.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material';
+import {MatInputModule, MatDialogModule} from '@angular/material';
 import { MatDatepickerModule, MatNativeDateModule, MatIconModule} from '@angular/material';
 import { ValidateHubOwnerComponent } from './validate-hub-owner/validate-hub-owner.component';
 import { ValidateReportedCommentComponent } from './validate-reported-comment/validate-reported-comment.component';
@@ -33,6 +33,8 @@ import { ValidateHubUserComponent } from './validate-hub-user/validate-hub-user.
 import { SubmittedCommentsComponent } from './submitted-comments/submitted-comments.component';
 import { GamificationComponent } from './gamification/gamification.component';
 import { ViewPostComponent } from './view-post/view-post.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -77,7 +79,9 @@ const appRoutes: Routes = [
     ValidateHubUserComponent,
     SubmittedCommentsComponent,
     GamificationComponent,
-    ViewPostComponent
+    ViewPostComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -99,10 +103,12 @@ const appRoutes: Routes = [
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
-  providers: [Globals],
-  bootstrap: [AppComponent]
+  providers: [Globals, LoginComponent, LogoutComponent],
+  bootstrap: [AppComponent],
+  entryComponents: [LoginComponent, LogoutComponent]
 })
 
 export class AppModule { }
