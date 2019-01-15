@@ -37,11 +37,6 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ReviewComponent } from './review/review.component';
 import { HubFinderComponent } from './hub-finder/hub-finder.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DatepickerComponent } from './datepicker/datepicker.component';
-import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ReviewComponent } from './review/review.component';
-import { HubFinderComponent } from './hub-finder/hub-finder.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 const appRoutes: Routes = [
