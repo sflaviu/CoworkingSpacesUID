@@ -49,7 +49,7 @@ export const REGULAR_USER_NAVBAR: any = [
   {
     id: 4,
     name: 'EVENTS',
-    url: 'events'
+    url: '/events'
   },
   {
     id: 5,

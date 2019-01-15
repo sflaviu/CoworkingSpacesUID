@@ -30,6 +30,8 @@ import { ValidateReportedCommentComponent } from './validate-reported-comment/va
 import { JoinAsAHubOwnerComponent } from './join-as-a-hub-owner/join-as-a-hub-owner.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ValidateHubUserComponent } from './validate-hub-user/validate-hub-user.component';
+import { SubmittedCommentsComponent } from './submitted-comments/submitted-comments.component';
+import { GamificationComponent } from './gamification/gamification.component';
 
 
 const appRoutes: Routes = [
@@ -47,6 +49,8 @@ const appRoutes: Routes = [
   {  path: 'validations/validateHubOwnerRequest', component: ValidateHubOwnerComponent },
   {  path: 'validations/validateHubUserRequest', component: ValidateHubUserComponent },
   {  path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
+  {path: 'gamification', component: GamificationComponent},
+  {path: 'submitted-comments', component: SubmittedCommentsComponent},
 ];
 
 @NgModule({
@@ -68,7 +72,9 @@ const appRoutes: Routes = [
     ValidateReportedCommentComponent,
     JoinAsAHubOwnerComponent,
     CreateEventComponent,
-    ValidateHubUserComponent
+    ValidateHubUserComponent,
+    SubmittedCommentsComponent,
+    GamificationComponent
   ],
   imports: [
     RouterModule.forRoot(

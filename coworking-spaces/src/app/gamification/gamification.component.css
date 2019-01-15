@@ -1,0 +1,9 @@
+.btn-small{
+    height: 35px;
+    margin-top: 95px;
+}
+
+.card{
+    position: relative;
+    display: flex;
+}

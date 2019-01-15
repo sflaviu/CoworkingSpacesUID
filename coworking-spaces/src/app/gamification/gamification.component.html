@@ -1,0 +1,47 @@
+<app-sticky-header></app-sticky-header>
+<div class = "row">
+<div class="form-group mt-5">
+  <select [(ngModel)]="selectedStrategy" (ngModelChange)="onStrategyChanged($event)" 
+       class="custom-select-sm  ml-5 mt-5" name="Apps">
+    <option  *ngFor="let strategy of strategies" [ngValue]="strategy">{{strategy.title}}</option>
+  </select>
+</div>
+<button (click)="addNew()" class="btn btn-primary btn-small ml-2">Add new strategy</button>
+</div>
+<div class="jumbotron m-5">
+  <h1 class="text-center text-capitalize">{{selectedStrategy.title}}</h1>
+  <div class="row justify-content-evenly">
+    <div class="cardComp m-5">
+      <p class="lead">Period of availability</p>
+      <div class="row justify-content-evenly">
+          <div class="cardComp m-5">
+            <label>From</label><br>
+             <app-datepicker></app-datepicker>
+          </div>
+          <div class="cardComp m-5">
+              <label>To</label><br>
+              <app-datepicker></app-datepicker>
+          </div>
+        </div>
+    </div>
+    <div class="cardComp m-5">
+        <p class="lead">Title</p>
+        <input class="form-control" [(ngModel)] ="selectedStrategy.title" />
+    </div>
+  </div>
+  <div  class="row justify-content-around">
+      <div class="cardComp m-5">
+          <p class="lead">Reward</p>
+          <input class="form-control" [(ngModel)]="selectedStrategy.reward"/>
+        </div>
+        <div class="cardComp m-5">
+            <p class="lead">Description</p>
+            <textarea class="form-control" [(ngModel)] ="selectedStrategy.description" cols="40" rows="5"></textarea>
+        </div>
+  </div>
+  
+  <p class="lead">
+    <a (click)="save()" class="btn btn-primary btn-lg">Save</a>
+  </p>
+</div>
+<app-submitted-comments></app-submitted-comments>

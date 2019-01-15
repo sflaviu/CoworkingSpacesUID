@@ -1,0 +1,13 @@
+.cardComp{
+    position: relative;
+    display: flex;
+}
+
+.pond {
+    justify-content: space-between;
+    display: flex;
+}
+
+.comment{
+    width: 75%;
+}
