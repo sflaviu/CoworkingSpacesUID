@@ -32,13 +32,13 @@ export const REGULAR_USER_NAVBAR: any = [
   {
     id: 1,
     name: 'ABOUT',
-    submenu: [['ABOUT US', 'membership'], ['REVIEWS', 'review']],
+    submenu: [['ABOUT US', 'membership'], ['REVIEWS', 'review'], ['MONTHLY GAME', 'gamification']],
     url: 'about'
   },
   {
     id: 2,
     name: 'JOIN US',
-    submenu: [['HUB OWNER', 'joinHubOwner'], ['BECOME MEMBER', 'location'], ['RENT A SPACE', 'spaceRental']],
+    submenu: [['BECOME MEMBER', 'location'], ['RENT A SPACE', 'spaceRental']],
     url: 'joinUs'
   },
   {
@@ -49,7 +49,7 @@ export const REGULAR_USER_NAVBAR: any = [
   {
     id: 4,
     name: 'EVENTS',
-    url: '/events'
+    url: 'events'
   },
   {
     id: 5,
@@ -69,7 +69,7 @@ export const ADMIN_NAVBAR: any = [
   {
     id: 2,
     name: 'JOIN US',
-    submenu: [['BECOME MEMBER', 'join'], ['RENT A SPACE', 'spaceRental']],
+    submenu: [['BECOME MEMBER', 'joinHubOwner'], ['RENT A SPACE', 'spaceRental']],
     url: 'joinUs'
   },
   {

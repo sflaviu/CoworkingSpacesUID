@@ -8,4 +8,6 @@ export class Globals {
 
   isLoggedIn = false;
   loggedInUsername;
+
+  selectedCity;
 }
