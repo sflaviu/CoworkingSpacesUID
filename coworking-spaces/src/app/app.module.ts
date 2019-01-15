@@ -30,6 +30,7 @@ import { ValidateReportedCommentComponent } from './validate-reported-comment/va
 import { JoinAsAHubOwnerComponent } from './join-as-a-hub-owner/join-as-a-hub-owner.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ValidateHubUserComponent } from './validate-hub-user/validate-hub-user.component';
+import { ViewPostComponent } from './view-post/view-post.component';
 
 
 const appRoutes: Routes = [
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
   {path: 'validations/validateHubOwnerRequest', component: ValidateHubOwnerComponent },
   {path: 'validations/validateHubUserRequest', component: ValidateHubUserComponent },
   {path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
+  {path: 'view-post', component: ViewPostComponent}
 ];
 
 @NgModule({
@@ -68,7 +70,8 @@ const appRoutes: Routes = [
     ValidateReportedCommentComponent,
     JoinAsAHubOwnerComponent,
     CreateEventComponent,
-    ValidateHubUserComponent
+    ValidateHubUserComponent,
+    ViewPostComponent
   ],
   imports: [
     RouterModule.forRoot(
