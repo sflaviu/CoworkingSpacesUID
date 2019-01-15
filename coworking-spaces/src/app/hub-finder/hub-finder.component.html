@@ -1,0 +1,67 @@
+<app-sticky-header></app-sticky-header>
+
+<section class="sectionAlignment">
+
+  <div >
+    <h1 class="title" > Find a hub! </h1>
+
+    <div class="split left finderAlignment">
+      <div class="centered">
+
+        <label class="textArrange" > Choose town :
+         <select (change)="updateDecision()">
+          <option *ngFor="let item of listOfCities"> {{item}}  </option>
+         </select>
+        </label>
+
+        <br/>
+        <br/>
+        <label class="textArrange"> Check availability between:
+          <br/>
+          <input type="date" ngModel="startDate"  (change)="updateDecision()">
+          <br/>
+           <input type="date" ngModel="endDate"  (change)="updateDecision()">
+        </label>
+        <br/>
+        <br/>
+
+        <label class="textArrange"> Price approximation (person/day):
+          <div class="price">
+          <br/>
+            {{priceLow}}<input type="range" class="slider" [ngModel]="valuePrice"  min="0" max="100" (change)="getSliderValue($event.target.value)" > {{priceHigh}}
+            <br/>
+          </div>
+          <p class="selectedAmountClass" >Selected amount: {{valuePrice*5}} $ </p>
+        </label>
+        <br/>
+
+        <label class="textArrange" >Minimum rating :  </label>
+        <br/>
+        <a *ngFor="let item of starListMinRating; let i=index " (click)="setStarMinRating(i)">
+          <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}" ></i>
+        </a>
+        <label *ngIf="ratingMinRating > 0" class="textArrange" > -{{ratingMinRating}} stars</label>
+        <label *ngIf="ratingMinRating === 0" class="textArrange" > - not rated</label>
+
+        <br/>
+        <label class="textArrange" > Fruit/beverages serving :</label>
+        <mat-checkbox ngModel="beveragesWanted"  (change)="updateDecision()"></mat-checkbox>
+
+        <br/>
+        <br/>
+      </div>
+
+    </div>
+    <div class="split right">
+      <div class="centered">
+            <h1 class="hubName" > {{selectedName}} </h1>
+              <img [src] ="selectedImage" (click) = "accessHub()">
+            <p>
+              {{selectedParagraph}}
+            </p>
+            <i class="fas fa-arrow-left arrowStyle arrowLeft" (click)= "moveLeft()"></i>
+            <i class="fas fa-arrow-right arrowStyle arrowRight" (click) = "moveRight()"></i>
+      </div>
+    </div>
+  </div>
+</section>

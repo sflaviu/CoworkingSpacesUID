@@ -1,0 +1,70 @@
+<app-sticky-header></app-sticky-header>
+
+<section class="sectionAlignment">
+
+  <div class="reviewAlignment">
+    <h1 class="title" >Review form  </h1>
+
+    <div>
+      <label class="textArrange" >Overall rating :  </label>
+      <br/>
+      <a *ngFor="let item of starListOA; let i=index " (click)="setStarOA(i)">
+        <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}" ></i>
+      </a>
+      <label *ngIf="ratingOA > 0" class="textArrange" > -{{ratingOA}} stars</label>
+      <label *ngIf="ratingOA === 0" class="textArrange" > - not rated</label>
+
+      <br/>
+      <br/>
+
+      <label class="textArrange" >Experience description :  </label>
+      <br/>
+      <textarea rows="7" cols="55" [ngModel]="reviewText"> </textarea>
+
+      <br/>
+      <br/>
+
+      <label class="textArrange">Location rating :  </label>
+      <br/>
+      <a *ngFor="let item of starListLoc; let i=index " (click)="setStarLoc(i)">
+        <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}"></i>
+      </a>
+      <label *ngIf="ratingLoc > 0" class="textArrange" > -{{ratingLoc}} stars</label>
+      <label *ngIf="ratingLoc === 0" class="textArrange" > - not rated</label>
+
+      <br/>
+      <br/>
+
+      <label  class="textArrange">Staff rating : </label>
+      <br/>
+      <a *ngFor="let item of starListStaff; let i=index " (click)="setStarStaff(i)">
+        <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}" style="color:#DF691A"></i>
+      </a>
+      <label *ngIf="ratingStaff > 0" class="textArrange" > -{{ratingStaff}} stars</label>
+      <label *ngIf="ratingStaff === 0" class="textArrange" > - not rated</label>
+
+      <br/>
+      <br/>
+
+      <label class="textArrange">Environment rating :   </label>
+      <br/>
+      <a *ngFor="let item of starListEnv; let i=index " (click)="setStarEnv(i)">
+        <i class="fa starClass" [ngClass]="{'fa-star-o':item,'fa-star':!item}" ></i>
+      </a>
+      <label *ngIf="ratingEnv > 0" class="textArrange" > -{{ratingEnv}} stars</label>
+      <label *ngIf="ratingEnv === 0" class="textArrange" > - not rated</label>
+
+      <br/>
+      <br/>
+
+      <div class="center">
+        Rating must given between 1-5 stars !
+      </div>
+      <div  class="center">
+        <button (click) = "sendReview()"> Send review!</button>
+      </div>
+      <div class="center" [ngClass]="resultClass" [innerHTML]="reviewResult">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+.sectionAlignment {
+  padding: 80px 0px 50px 0px;
+  width: 47%;
+  margin: auto;
+}
+
+.starClass{
+  color:#DF691A;
+  font-size: 130%;
+  width: 22px;
+}
+.textArrange {
+  font-size: 130%;
+}
+
+.reviewAlignment {
+  padding: 10px 10px 15px 10px;
+  border: #DF691A 2px dotted ;
+}
+
+.title {
+  color: #DF691A;
+  font-size: 220%;
+  text-align: center;
+  font-weight: bold;
+  padding: 0px 0px 10px 0px;
+}
+
+.wrapper{
+  text-align: center  ;
+}
+.buttonReview{
+  font-size: 130%;
+}
+
+.errorClass{
+  color: red;
+}
+
+.center{
+  text-align: center ;
+}
+.successfulClass{
+  color: green;
+}
+
+
+

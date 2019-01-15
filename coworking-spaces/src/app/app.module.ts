@@ -13,9 +13,9 @@ import { SpaceRentalComponent } from './space-rental/space-rental.component';
 import {Globals} from './model/globals';
 import { EventsComponent } from './events/events.component';
 import { EventComponent } from './event/event.component';
-import { AgmCoreModule } from '@agm/core';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgmCoreModule} from '@agm/core';
+import { ToastrModule} from 'ngx-toastr';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import {NgbDropdown, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BlogComponent } from './blog/blog.component';
@@ -35,8 +35,9 @@ import { GamificationComponent } from './gamification/gamification.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-
-
+import { ReviewComponent } from './review/review.component';
+import { HubFinderComponent } from './hub-finder/hub-finder.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -56,7 +57,9 @@ const appRoutes: Routes = [
   {path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
   {path: 'gamification', component: GamificationComponent},
   {path: 'submitted-comments', component: SubmittedCommentsComponent},
-  {path: 'view-post', component: ViewPostComponent}
+  {path: 'view-post', component: ViewPostComponent},
+  {path: 'review', component: ReviewComponent},
+  {path: 'explore', component: HubFinderComponent}
 ];
 
 @NgModule({
@@ -83,7 +86,11 @@ const appRoutes: Routes = [
     GamificationComponent,
     ViewPostComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    ViewPostComponent,
+    ReviewComponent,
+    HubFinderComponent
+
   ],
   imports: [
     RouterModule.forRoot(
@@ -106,7 +113,9 @@ const appRoutes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [Globals, LoginComponent, LogoutComponent],
   bootstrap: [AppComponent],
