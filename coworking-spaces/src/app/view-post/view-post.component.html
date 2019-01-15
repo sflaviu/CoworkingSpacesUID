@@ -1,13 +1,9 @@
-<app-sticky-header>
 
-</app-sticky-header>
   <!--{{open}}-->
 <div class="article">
   <div class="jumbotron">
   <h1 class="display-2">{{post.title}}</h1>
-    <p>{{post.author}}</p>
   <p class="lead">{{post.description}}</p>
   <p>{{post.content}}</p>
   </div>
-  <app-submitted-comments *ngIf="globals.loggedInUsername==post.author"></app-submitted-comments>
 </div>

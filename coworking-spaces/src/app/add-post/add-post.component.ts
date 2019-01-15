@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Globals} from '../model/globals';
 
 @Component({
   selector: 'app-add-post',
@@ -11,7 +10,7 @@ export class AddPostComponent implements OnInit {
   drafts = [];
   selectedFile: File;
   imagePreview: any;
-  constructor(private globals: Globals) { }
+  constructor() { }
 
   ngOnInit() {
     this.fillDraftsList();
@@ -40,8 +39,8 @@ export class AddPostComponent implements OnInit {
     }
     let blog;
     if(this.selectedFile !=null)
-    blog = {title: title.value,author:this.globals.loggedInUsername, description: description.value, content: content.value, image: URL.createObjectURL( this.selectedFile), comments: []};
-    else { blog = {title: title.value,author:this.globals.loggedInUsername, description: description.value, content: content.value, image:'', comments: []}; }    blogs.push(blog);
+    blog = {title: title.value, description: description.value, content: content.value, image: URL.createObjectURL( this.selectedFile), comments: []};
+    else { blog = {title: title.value, description: description.value, content: content.value, image:'', comments: []}; }    blogs.push(blog);
     localStorage.setItem('blogs', JSON.stringify(blogs));
     title.value = '';
     content.value = '';
@@ -65,7 +64,7 @@ export class AddPostComponent implements OnInit {
     drafts.splice(i, 1);
     localStorage.setItem('drafts', JSON.stringify(drafts));
     this.fillDraftsList();
-    alert('Added Post');
+    alert('Added Blog');
   }
   saveDraft(title: HTMLInputElement, description: HTMLInputElement, content: HTMLInputElement) {
     console.log(title.value, content.value);
@@ -74,7 +73,7 @@ export class AddPostComponent implements OnInit {
     if (blogList) {
       drafts = JSON.parse(blogList);
     }
-    const draft = {title: title.value, author: this.globals.loggedInUsername, description: description.value, content: content.value};
+    const draft = {title: title.value, description: description.value, content: content.value};
     drafts.push(draft);
     localStorage.setItem('drafts', JSON.stringify(drafts));
     title.value = '';
@@ -93,7 +92,6 @@ export class AddPostComponent implements OnInit {
     localStorage.setItem('drafts', JSON.stringify(drafts));
     this.fillDraftsList();
   }
-
   editDraft(title: HTMLInputElement, description: HTMLInputElement, content: HTMLInputElement, draftTitle: string, draftDescription: string, draftContent: string, i: number) {
     console.log(title.value, content.value);
     title.value = draftTitle;

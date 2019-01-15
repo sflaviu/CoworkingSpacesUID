@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {hubUser} from "../../constants";
 
 @Component({
   selector: 'app-validate-hub-user',
@@ -8,7 +7,6 @@ import {hubUser} from "../../constants";
 })
 export class ValidateHubUserComponent implements OnInit {
 
-  hbb =hubUser;
 
   constructor() { }
 

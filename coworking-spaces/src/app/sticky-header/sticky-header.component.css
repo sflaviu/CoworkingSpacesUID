@@ -1,5 +1,5 @@
 .menuItem {
-  margin: 2px 25px 2px 25px;
+  margin: 0px 25px 2px 25px;
 }
 
 .iconsArrange {
@@ -45,6 +45,13 @@ span:hover .sub-menu {
 #userName {
   margin: 0px 3px 0px 0px;
   font-size: 110%;
+  color: #2B3E50;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#logo {
+  font-size: 130%;
   color: #2B3E50;
   font-weight: bold;
   font-style: italic;
