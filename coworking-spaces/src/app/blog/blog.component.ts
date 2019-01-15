@@ -17,13 +17,14 @@ export class BlogComponent implements OnInit {
 
 
   ngOnInit() {
-    localStorage.clear();
+   localStorage.clear();
     const blogList = localStorage.getItem('blogs');
     if (blogList) {
       this.blogs = JSON.parse(blogList);
     }
-    const blog0 = {title: 'The most important things to know about CoWorking', description: 'It is useless when it comes to UID', content: 'Acesta este continutul unei postari inutile', image: '../assets/img/bibliocafea1.jpg', comments: [{user: 'Sebi', content: 'Oare mai lucrez mult la astea?'}]};
-    const blog1 = {title: 'Just another post about Nothing', description: 'I had to write this post', content: 'Acesta este continutul unei postari inutile, la fel ca precedenta', image: '../assets/img/bibliocafea2.jpg', comments: [{user: 'Sebi', content: 'Oare mai lucrez mult la astea?'}]};
+    const blog0 = {title: 'The most important things to know about CoWorking',author:'user', description: 'It is useless when it comes to UID', content: 'Acesta este continutul unei postari inutile', image: '../assets/img/bibliocafea1.jpg', comments: [{user: 'Sebi', content: 'Oare mai lucrez mult la astea?'}]};
+    // @ts-ignore
+    const blog1 = {title: 'Just another post about Nothing', author:'Sebastian', description: 'I had to write this post', content: 'Acesta este continutul unei postari inutile, la fel ca precedenta', image: '../assets/img/bibliocafea2.jpg', comments: [{user: 'Sebi', content: 'Oare mai lucrez mult la astea?'}]};
     this.blogs.push(blog0);
     this.blogs.push(blog1);
     localStorage.setItem('blogs', JSON.stringify(this.blogs));
@@ -41,7 +42,7 @@ export class BlogComponent implements OnInit {
     //alert('AI FACUT CLICK');
     const toOpen = {id: i};
     localStorage.setItem('toOpen', JSON.stringify(toOpen));
-    location.assign('/view-post');
+    this.router.navigate(['/view-post']);
   }
 
 }

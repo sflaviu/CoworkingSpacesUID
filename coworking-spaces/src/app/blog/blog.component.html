@@ -28,9 +28,10 @@
   <!--hardcoded part-->
   <div class="card" *ngFor="let blog of blogs;  let i= index" >
     <div class="card-header">
-      {{blog.title}}
+      <h2>{{blog.title}}</h2>
+      <p>{{blog.author}}</p>
     </div>
-    <img  [src]='photoURL(i)' class="card-img" width="300" height="400"/>
+    <img *ngIf="photoURL(i)!=''" [src]='photoURL(i)' class="card-img" width="300" height="400"/>
     <!--<p>{{blog.image}}</p>-->
     <div class="card-body">
       <p class="card-text">{{ blog.description }}</p>

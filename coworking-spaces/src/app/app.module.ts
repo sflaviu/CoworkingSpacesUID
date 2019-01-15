@@ -56,6 +56,7 @@ const appRoutes: Routes = [
   {path: 'validations/validateReportedCommentRequest', component: ValidateReportedCommentComponent },
   {path: 'gamification', component: GamificationComponent},
   {path: 'submitted-comments', component: SubmittedCommentsComponent},
+  {path: 'view-post', component: ViewPostComponent}
 ];
 
 @NgModule({

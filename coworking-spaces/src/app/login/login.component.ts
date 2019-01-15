@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     } else if (this.username === 'user' && this.password === 'password') {
       this.loginSuccess = true;
       this.globals.role = 'user';
-      this.globals.loggedInUsername = 'User';
+      this.globals.loggedInUsername = 'user';
       this.globals.isLoggedIn = true;
     } else {
       this.displayErrorMessage = true;
