@@ -37,6 +37,7 @@ import { ReviewComponent } from './review/review.component';
 import { HubFinderComponent } from './hub-finder/hub-finder.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
+
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'membership', component: MembershipComponent},
