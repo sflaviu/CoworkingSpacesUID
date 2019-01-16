@@ -22,7 +22,7 @@ export class HubFinderComponent implements OnInit {
 
   paragraphText: String[] = ['TechHub has a very wide range of hubs, situated all over the globe. It truly is an amazing hub, only the coolest people end up hanging out at this location.', 'ClujHub is an incredible hub situated in a very beautiful town, even though it does not posses a metro.'];
   imagesPath: String[] = ['/assets/img/techhub.jpg' , '/assets/img/clujhub.jpg'];
-  names: String[] = ['TechHub' , 'ClujHub'];
+  names: String[] = ['TechLand' , 'Cluj'];
 
   selectedImage: String;
   selectedName: String;

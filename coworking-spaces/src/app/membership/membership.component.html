@@ -1,93 +1,109 @@
 <app-sticky-header></app-sticky-header>
 
-<section class="sectionAlignment">
-  <form class="formAlignment" [formGroup]="membershipForm" (ngSubmit)="onFormSubmit()">
-    <h2 class="title">Application form</h2>
+<div>
+  <section class="sectionAlignment">
+    <form class="formAlignment" [formGroup]="membershipForm" (ngSubmit)="onFormSubmit()">
+      <h2 class="title">Application form</h2>
 
-    <fieldset>
-      <div>
-        <label class="textArrange">First name</label>
-        <input type="text" formControlName="firstName" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
-        <div *ngIf="submitted && membershipForm.controls.firstName.errors">
-          <div *ngIf="membershipForm.controls.firstName.errors.required" class="error">First name is mandatory</div>
+      <fieldset>
+        <div>
+          <label class="textArrange">First name</label>
+          <input type="text" formControlName="firstName" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+          <div *ngIf="submitted && membershipForm.controls.firstName.errors">
+            <div *ngIf="membershipForm.controls.firstName.errors.required" class="error">First name is mandatory</div>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <label class="textArrange">Last name</label>
-        <input type="text" formControlName="lastName" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
-        <div *ngIf="submitted && membershipForm.controls.lastName.errors"  class="error">
-          <div *ngIf="membershipForm.controls.lastName.errors.required">First name is mandatory</div>
+        <div>
+          <label class="textArrange">Last name</label>
+          <input type="text" formControlName="lastName" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+          <div *ngIf="submitted && membershipForm.controls.lastName.errors"  class="error">
+            <div *ngIf="membershipForm.controls.lastName.errors.required">First name is mandatory</div>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <label class="textArrange">Email</label>
-        <input type="text" formControlName="mail" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
-        <div *ngIf="submitted && membershipForm.controls.mail.errors"  class="error">
-          <div *ngIf="membershipForm.controls.mail.errors.required">Email is mandatory</div>
+        <div>
+          <label class="textArrange">Email</label>
+          <input type="text" formControlName="mail" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+          <div *ngIf="submitted && membershipForm.controls.mail.errors"  class="error">
+            <div *ngIf="membershipForm.controls.mail.errors.required">Email is mandatory</div>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <label class="textArrange">Phone number</label>
-        <input type="text" formControlName="phoneNo" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
-        <div *ngIf="submitted && membershipForm.controls.phoneNo.errors"  class="error">
-          <div *ngIf="membershipForm.controls.phoneNo.errors.required">Email is mandatory</div>
+        <div>
+          <label class="textArrange">Phone number</label>
+          <input type="text" formControlName="phoneNo" class="form-control" aria-describedby="emailHelp" placeholder="Mandatory">
+          <div *ngIf="submitted && membershipForm.controls.phoneNo.errors"  class="error">
+            <div *ngIf="membershipForm.controls.phoneNo.errors.required">Email is mandatory</div>
+          </div>
         </div>
+
+        <div>
+          <label class="textArrange">Company</label>
+          <input type="text" formControlName="company" class="form-control" aria-describedby="emailHelp" placeholder="Optional">
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Team members</legend>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            < 5 people
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+            5 - 10 people
+          </label>
+        </div>
+
+        <div class="form-check disabled">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+            11 - 20 people
+          </label>
+        </div>
+
+        <div class="form-check disabled">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option3">
+            > 20 people
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="center">
+        <button type="submit" class="btn btn-primary cta btnArrange">Submit</button>
       </div>
 
-      <div>
-        <label class="textArrange">Company</label>
-        <input type="text" formControlName="company" class="form-control" aria-describedby="emailHelp" placeholder="Optional">
-      </div>
-    </fieldset>
-
-    <fieldset class="form-group">
-      <legend>Team members</legend>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-          < 5 people
-        </label>
+      <div *ngIf="success" class="center" id="successMessage">
+        <p>You are 50% done!</p>
+        <div>Your application form has been successfully submitted. We will reach you as soon as possible.</div>
+        <div>If you have any questions, do not hesitate to contact us at
+          <a style="color:beige">ourhub@ourhub.com</a> ! </div>
       </div>
 
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-          5 - 10 people
-        </label>
+      <div *ngIf="success" class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%; "></div>
       </div>
+    </form>
+  </section>
 
-      <div class="form-check disabled">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
-          11 - 20 people
-        </label>
-      </div>
 
-      <div class="form-check disabled">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option3">
-          > 20 people
-        </label>
-      </div>
-    </fieldset>
 
-    <div class="center">
-      <button type="submit" class="btn btn-primary cta">Submit</button>
+  <section class="right">
+    <div class="centered">
+      <h1 class="hubName" > PoliHub </h1>
+      <img [src]="selectedImage">
+      <h1 class="hubName">
+        {{globals.selectedCity}}
+      </h1>
+      <i class="fas fa-arrow-left arrowStyle arrowLeft" (click)= "moveLeft()"></i>
+      <i class="fas fa-arrow-right arrowStyle arrowRight" (click) = "moveRight()"></i>
     </div>
-  </form>
-</section>
+  </section>
 
-
-<div *ngIf="success" class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%; "></div>
-</div>
-
-<div *ngIf="success" class="center" id="successMessage">
-  <p>You are 50% done!</p>
-  <div>Your application form has been successfully submitted. We will reach you as soon as possible for asking a few relevant questions.</div>
-  <div>If you have any questions, do not hesitate to contact us at
-    <a style="color:beige">outhub@ourhub.com</a> ! </div>
 </div>
